@@ -1,0 +1,806 @@
+<edi-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./config.xsd">
+  <attributs>
+    <attribut code="0001" name="Syntax identifier" type="AN" size="4"/>
+    <attribut code="0002" name="Syntax version number" type="AN" size="1"/>
+    <attribut code="0004" name="Interchange sender identification" type="AN" size="35"/>
+    <attribut code="0007" name="Identification code qualifier" type="AN" size="4"/>
+    <attribut code="0008" name="Interchange sender internal identification" type="AN" size="35"/>
+    <attribut code="0010" name="Interchange recipient identification" type="AN" size="35"/>
+    <attribut code="0014" name="Interchange recipient internal identification" type="AN" size="35"/>
+    <attribut code="0017" name="Date" type="N" size="8"/>
+    <attribut code="0019" name="Time" type="N" size="4"/>
+    <attribut code="0020" name="Interchange control reference" type="AN" size="14"/>
+    <attribut code="0022" name="Recipient reference/password" type="AN" size="14"/>
+    <attribut code="0025" name="Recipient reference/password qualifier" type="AN" size="2"/>
+    <attribut code="0026" name="Application reference" type="AN" size="14"/>
+    <attribut code="0029" name="Processing priority code" type="AN" size="1"/>
+    <attribut code="0031" name="Acknowledgement request" type="N" size="1"/>
+    <attribut code="0032" name="Interchange agreement identifier" type="AN" size="35"/>
+    <attribut code="0035" name="Test indicator" type="N" size="1"/>
+    <attribut code="0036" name="Interchange control count" type="N" size="6"/>
+    <attribut code="0042" name="Interchange sender internal sub-identification" type="AN" size="35"/>
+    <attribut code="0046" name="Interchange recipient internal sub-identification" type="AN" size="35"/>
+    <attribut code="0051" name="Controlling agency, coded" type="AN" size="3"/>
+    <attribut code="0052" name="Message version number" type="AN" size="3"/>
+    <attribut code="0054" name="Message release number" type="AN" size="3"/>
+    <attribut code="0057" name="Association assigned code" type="AN" size="6"/>
+    <attribut code="0062" name="Message reference number" type="AN" size="14"/>
+    <attribut code="0065" name="Message type" type="AN" size="6"/>
+    <attribut code="0068" name="Common access reference" type="AN" size="35"/>
+    <attribut code="0070" name="Sequence of transfers" type="N" size="2"/>
+    <attribut code="0073" name="First and last transfer" type="AN" size="1"/>
+    <attribut code="0074" name="Number of segments in a message" type="N" size="10"/>
+    <attribut code="0080" name="Service code list directory version number" type="AN" size="6"/>
+    <attribut code="0110" name="Code list directory version number" type="AN" size="6"/>
+    <attribut code="0113" name="Message type sub-function identification" type="AN" size="6"/>
+    <attribut code="0115" name="Message subset identification" type="AN" size="14"/>
+    <attribut code="0116" name="Message subset version number" type="AN" size="3"/>
+    <attribut code="0118" name="Message subset release number" type="AN" size="3"/>
+    <attribut code="0121" name="Message implementation guideline identification" type="AN" size="14"/>
+    <attribut code="0122" name="Message implementation guideline version number" type="AN" size="3"/>
+    <attribut code="0124" name="Message implementation guideline release number" type="AN" size="3"/>
+    <attribut code="0127" name="Scenario identification" type="AN" size="14"/>
+    <attribut code="0128" name="Scenario version number" type="AN" size="3"/>
+    <attribut code="0130" name="Scenario release number" type="AN" size="3"/>
+    <attribut code="0133" name="Character encoding, coded" type="AN" size="3"/>
+    <attribut code="1000" name="Document name" type="AN" size="35"/>
+    <attribut code="1001" name="Document name code" type="AN" size="3"/>
+    <attribut code="1004" name="Document identifier" type="AN" size="35"/>
+    <attribut code="1056" name="Version identifier" type="AN" size="9"/>
+    <attribut code="1060" name="Revision identifier" type="AN" size="6"/>
+    <attribut code="1131" name="Code list identification code" type="AN" size="17"/>
+    <attribut code="1153" name="Reference code qualifier" type="AN" size="3"/>
+    <attribut code="1154" name="Reference identifier" type="AN" size="70"/>
+    <attribut code="1156" name="Document line identifier" type="AN" size="6"/>
+    <attribut code="1225" name="Message function code" type="AN" size="3"/>
+    <attribut code="1312" name="Code list responsible agency code" type="N" size="4"/>
+    <attribut code="1366" name="Document source description" type="AN" size="70"/>
+    <attribut code="1373" name="Document status code" type="AN" size="3"/>
+    <attribut code="1490" name="Consolidation item number" type="N" size="4"/>
+    <attribut code="1496" name="Goods item number" type="N" size="5"/>
+    <attribut code="2005" name="Date or time or period function code qualifier" type="AN" size="3"/>
+    <attribut code="2379" name="Date or time or period format code" type="AN" size="3"/>
+    <attribut code="2380" name="Date or time or period text" type="AN" size="35"/>
+    <attribut code="3035" name="Party function code qualifier" type="AN" size="3"/>
+    <attribut code="3036" name="Party name" type="AN" size="35"/>
+    <attribut code="3039" name="Party identifier" type="AN" size="35"/>
+    <attribut code="3042" name="Street and number or post office box identifier" type="AN" size="35"/>
+    <attribut code="3045" name="Party name format code" type="AN" size="3"/>
+    <attribut code="3055" name="Code list responsible agency code" type="AN" size="3"/>
+    <attribut code="3124" name="Name and address description" type="AN" size="35"/>
+    <attribut code="3127" name="Carrier identifier" type="AN" size="17"/>
+    <attribut code="3128" name="Carrier name" type="AN" size="35"/>
+    <attribut code="3139" name="Contact function code" type="AN" size="3"/>
+    <attribut code="3148" name="Communication address identifier" type="AN" size="512"/>
+    <attribut code="3155" name="Communication address code qualifier" type="AN" size="3"/>
+    <attribut code="3164" name="City name" type="AN" size="35"/>
+    <attribut code="3207" name="Country name code" type="AN" size="3"/>
+    <attribut code="3222" name="First related location name" type="AN" size="70"/>
+    <attribut code="3223" name="First related location name code" type="AN" size="25"/>
+    <attribut code="3224" name="Location name" type="AN" size="256"/>
+    <attribut code="3225" name="Location name code" type="AN" size="35"/>
+    <attribut code="3227" name="Location function code qualifier" type="AN" size="3"/>
+    <attribut code="3228" name="Country sub-entity name" type="AN" size="70"/>
+    <attribut code="3229" name="Country sub-entity name code" type="AN" size="9"/>
+    <attribut code="3232" name="Second related location name" type="AN" size="70"/>
+    <attribut code="3233" name="Second related location name code" type="AN" size="25"/>
+    <attribut code="3251" name="Postal identification code" type="AN" size="17"/>
+    <attribut code="3412" name="Department or employee name" type="AN" size="35"/>
+    <attribut code="3413" name="Department or employee name code" type="AN" size="17"/>
+    <attribut code="3453" name="Language name code" type="AN" size="3"/>
+    <attribut code="4000" name="Reference version identifier" type="AN" size="35"/>
+    <attribut code="4078" name="Handling instruction description" type="AN" size="70"/>
+    <attribut code="4079" name="Handling instruction description code" type="AN" size="3"/>
+    <attribut code="4233" name="Marking instructions code" type="AN" size="3"/>
+    <attribut code="4343" name="Response type code" type="AN" size="3"/>
+    <attribut code="4440" name="Free text" type="AN" size="512"/>
+    <attribut code="4441" name="Free text description code" type="AN" size="17"/>
+    <attribut code="4447" name="Free text format code" type="AN" size="3"/>
+    <attribut code="4451" name="Text subject code qualifier" type="AN" size="3"/>
+    <attribut code="4453" name="Free text function code" type="AN" size="3"/>
+    <attribut code="5479" name="Relation code" type="AN" size="3"/>
+    <attribut code="6008" name="Height measure" type="N" size="15"/>
+    <attribut code="6140" name="Width measure" type="N" size="15"/>
+    <attribut code="6145" name="Dimension type code qualifier" type="AN" size="3"/>
+    <attribut code="6152" name="Range maximum quantity" type="N" size="18"/>
+    <attribut code="6154" name="Non-discrete measurement name" type="AN" size="70"/>
+    <attribut code="6155" name="Non-discrete measurement name code" type="AN" size="17"/>
+    <attribut code="6162" name="Range minimum quantity" type="N" size="18"/>
+    <attribut code="6168" name="Length measure" type="N" size="15"/>
+    <attribut code="6245" name="Temperature type code qualifier" type="AN" size="3"/>
+    <attribut code="6246" name="Temperature degree" type="N" size="15"/>
+    <attribut code="6311" name="Measurement purpose code qualifier" type="AN" size="3"/>
+    <attribut code="6313" name="Measured attribute code" type="AN" size="3"/>
+    <attribut code="6314" name="Measure" type="AN" size="18"/>
+    <attribut code="6321" name="Measurement significance code" type="AN" size="3"/>
+    <attribut code="6411" name="Measurement unit code" type="AN" size="8"/>
+    <attribut code="6432" name="Significant digits quantity" type="N" size="2"/>
+    <attribut code="7064" name="Type of packages" type="AN" size="35"/>
+    <attribut code="7065" name="Package type description code" type="AN" size="17"/>
+    <attribut code="7088" name="Dangerous goods flashpoint description" type="AN" size="8"/>
+    <attribut code="7102" name="Shipping marks description" type="AN" size="35"/>
+    <attribut code="7106" name="Shipment flashpoint degree" type="N" size="3"/>
+    <attribut code="7124" name="United Nations Dangerous Goods (UNDG) identifier" type="N" size="4"/>
+    <attribut code="7130" name="Customer shipment authorisation identifier" type="AN" size="17"/>
+    <attribut code="7224" name="Package quantity" type="N" size="8"/>
+    <attribut code="7233" name="Packaging related description code" type="AN" size="3"/>
+    <attribut code="7383" name="Surface or layer code" type="AN" size="3"/>
+    <attribut code="7418" name="Hazardous material category name" type="AN" size="35"/>
+    <attribut code="7419" name="Hazardous material category name code" type="AN" size="7"/>
+    <attribut code="7511" name="Marking type code" type="AN" size="3"/>
+    <attribut code="8028" name="Means of transport journey identifier" type="AN" size="17"/>
+    <attribut code="8051" name="Transport stage code qualifier" type="AN" size="3"/>
+    <attribut code="8053" name="Equipment type code qualifier" type="AN" size="3"/>
+    <attribut code="8066" name="Transport mode name" type="AN" size="17"/>
+    <attribut code="8067" name="Transport mode name code" type="AN" size="3"/>
+    <attribut code="8077" name="Equipment supplier code" type="AN" size="3"/>
+    <attribut code="8078" name="Additional hazard classification identifier" type="AN" size="7"/>
+    <attribut code="8092" name="Hazard code version identifier" type="AN" size="10"/>
+    <attribut code="8101" name="Transit direction indicator code" type="AN" size="3"/>
+    <attribut code="8126" name="Transport emergency card identifier" type="AN" size="10"/>
+    <attribut code="8154" name="Equipment size and type description" type="AN" size="35"/>
+    <attribut code="8155" name="Equipment size and type description Code" type="AN" size="10"/>
+    <attribut code="8158" name="Orange hazard placard upper part identifier" type="AN" size="4"/>
+    <attribut code="8169" name="Full or empty indicator code" type="AN" size="3"/>
+    <attribut code="8178" name="Transport means description" type="AN" size="17"/>
+    <attribut code="8179" name="Transport means description code" type="AN" size="8"/>
+    <attribut code="8186" name="Orange hazard placard lower part identifier" type="AN" size="4"/>
+    <attribut code="8211" name="Hazardous cargo transport authorisation code" type="AN" size="3"/>
+    <attribut code="8212" name="Transport means identification name" type="AN" size="35"/>
+    <attribut code="8213" name="Transport means identification name identifier" type="AN" size="9"/>
+    <attribut code="8246" name="Dangerous goods marking identifier" type="AN" size="4"/>
+    <attribut code="8249" name="Equipment status code" type="AN" size="3"/>
+    <attribut code="8255" name="Packing instruction type code" type="AN" size="3"/>
+    <attribut code="8260" name="Equipment identifier" type="AN" size="17"/>
+    <attribut code="8273" name="Dangerous goods regulations code" type="AN" size="3"/>
+    <attribut code="8275" name="Container or package contents indicator code" type="AN" size="3"/>
+    <attribut code="8281" name="Transport means ownership indicator code" type="AN" size="3"/>
+    <attribut code="8325" name="Hazardous means of transport category code" type="AN" size="3"/>
+    <attribut code="8339" name="Packaging danger level code" type="AN" size="3"/>
+    <attribut code="8351" name="Hazard identification code" type="AN" size="7"/>
+    <attribut code="8364" name="Emergency procedure for ships identifier" type="AN" size="6"/>
+    <attribut code="8410" name="Hazard medical first aid guide identifier" type="AN" size="4"/>
+    <attribut code="8453" name="Transport means nationality code" type="AN" size="3"/>
+    <attribut code="8457" name="Excess transportation reason code" type="AN" size="3"/>
+    <attribut code="8459" name="Excess transportation responsibility code" type="AN" size="3"/>
+    <attribut code="9321" name="Application error code" type="AN" size="8"/>
+  </attributs>
+  <balises>
+    <balise nom="UNB">
+      <element code="S001" name="SYNTAX IDENTIFIER" isOblig="1" occurence="1">
+        <attr-ref code="0001" isOblig="1"/>
+        <attr-ref code="0002" isOblig="1"/>
+        <attr-ref code="0080" isOblig="0"/>
+        <attr-ref code="0133" isOblig="0"/>
+      </element>
+      <element code="S002" name="INTERCHANGE SENDER" isOblig="1" occurence="1">
+        <attr-ref code="0004" isOblig="1"/>
+        <attr-ref code="0007" isOblig="0"/>
+        <attr-ref code="0008" isOblig="0"/>
+        <attr-ref code="0042" isOblig="0"/>
+      </element>
+      <element code="S003" name="INTERCHANGE RECIPIENT" isOblig="1" occurence="1">
+        <attr-ref code="0010" isOblig="1"/>
+        <attr-ref code="0007" isOblig="0"/>
+        <attr-ref code="0014" isOblig="0"/>
+        <attr-ref code="0046" isOblig="0"/>
+      </element>
+      <element code="S004" name="DATE AND TIME OF PREPARATION" isOblig="1" occurence="1">
+        <attr-ref code="0017" isOblig="1"/>
+        <attr-ref code="0019" isOblig="1"/>
+      </element>
+      <element att-ref="0020" isOblig="1" occurence="1"/>
+      <element code="S005" name="RECIPIENT'S REFERENCE/PASSWORD DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="0022" isOblig="1"/>
+        <attr-ref code="0025" isOblig="0"/>
+      </element>
+      <element att-ref="0026" isOblig="0" occurence="1"/>
+      <element att-ref="0029" isOblig="0" occurence="1"/>
+      <element att-ref="0031" isOblig="0" occurence="1"/>
+      <element att-ref="0032" isOblig="0" occurence="1"/>
+      <element att-ref="0035" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="UNH">
+      <element att-ref="0062"/>
+      <element code="S009" name="MESSAGE IDENTIFIER" isOblig="1" occurence="1">
+        <attr-ref code="0065" isOblig="1"/>
+        <attr-ref code="0052" isOblig="1"/>
+        <attr-ref code="0054" isOblig="1"/>
+        <attr-ref code="0051" isOblig="1"/>
+        <attr-ref code="0057" isOblig="0"/>
+        <attr-ref code="0110" isOblig="0"/>
+        <attr-ref code="0113" isOblig="0"/>
+      </element>
+      <element att-ref="0068" isOblig="0" occurence="1"/>
+      <element code="S010" name="STATUS OF THE TRANSFER" isOblig="0" occurence="1">
+        <attr-ref code="0070" isOblig="1"/>
+        <attr-ref code="0073" isOblig="0"/>
+      </element>
+      <element code="S016" name="MESSAGE SUBSET IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="0115" isOblig="1"/>
+        <attr-ref code="0116" isOblig="0"/>
+        <attr-ref code="0118" isOblig="0"/>
+        <attr-ref code="0051" isOblig="0"/>
+      </element>
+      <element code="S017" name="MESSAGE IMPLEMENTATION GUIDELINE IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="0121" isOblig="1"/>
+        <attr-ref code="0122" isOblig="0"/>
+        <attr-ref code="0124" isOblig="0"/>
+        <attr-ref code="0051" isOblig="0"/>
+      </element>
+      <element code="S018" name="SCENARIO IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="0127" isOblig="1"/>
+        <attr-ref code="0128" isOblig="0"/>
+        <attr-ref code="0130" isOblig="0"/>
+        <attr-ref code="0051" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="BGM">
+      <element code="C002" name="DOCUMENT/MESSAGE NAME" isOblig="0" occurence="1">
+        <attr-ref code="1001" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="1000" isOblig="0"/>
+      </element>
+      <element code="C106" name="DOCUMENT/MESSAGE IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="1004" isOblig="0"/>
+        <attr-ref code="1056" isOblig="0"/>
+        <attr-ref code="1060" isOblig="0"/>
+      </element>
+      <element att-ref="1225" isOblig="0" occurence="1"/>
+      <element att-ref="4343" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="RFF">
+      <element code="C506" name="REFERENCE" isOblig="1" occurence="1">
+        <attr-ref code="1153" isOblig="1"/>
+        <attr-ref code="1154" isOblig="0"/>
+        <attr-ref code="1156" isOblig="0"/>
+        <attr-ref code="4000" isOblig="0"/>
+        <attr-ref code="1060" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="HAN">
+      <element code="C524" name="HANDLING INSTRUCTIONS" isOblig="0" occurence="1">
+        <attr-ref code="4079" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="4078" isOblig="0"/>
+      </element>
+      <element code="C218" name="HAZARDOUS MATERIAL" isOblig="0" occurence="1">
+        <attr-ref code="7419" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="7418" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="TDT">
+      <element att-ref="8051" isOblig="1" occurence="1"/>
+      <element att-ref="8028" isOblig="0" occurence="1"/>
+      <element code="C220" name="MODE OF TRANSPORT" isOblig="0" occurence="1">
+        <attr-ref code="8067" isOblig="0"/>
+        <attr-ref code="8066" isOblig="0"/>
+      </element>
+      <element code="C001" name="TRANSPORT MEANS" isOblig="0" occurence="1">
+        <attr-ref code="8179" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="8178" isOblig="0"/>
+      </element>
+      <element code="C040" name="CARRIER" isOblig="0" occurence="1">
+        <attr-ref code="3127" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3128" isOblig="0"/>
+      </element>
+      <element att-ref="8101" isOblig="0" occurence="1"/>
+      <element code="C401" name="EXCESS TRANSPORTATION INFORMATION" isOblig="0" occurence="1">
+        <attr-ref code="8457" isOblig="1"/>
+        <attr-ref code="8459" isOblig="1"/>
+        <attr-ref code="7130" isOblig="0"/>
+      </element>
+      <element code="C222" name="TRANSPORT IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="8213" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="8212" isOblig="0"/>
+        <attr-ref code="8453" isOblig="0"/>
+      </element>
+      <element att-ref="8281" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="DTM">
+      <element code="C507" name="DATE/TIME/PERIOD" isOblig="1" occurence="1">
+        <attr-ref code="2005" isOblig="1"/>
+        <attr-ref code="2380" isOblig="0"/>
+        <attr-ref code="2379" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="LOC">
+      <element att-ref="3227" isOblig="1" occurence="1"/>
+      <element code="C517" name="LOCATION IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="3225" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3224" isOblig="0"/>
+      </element>
+      <element code="C519" name="RELATED LOCATION ONE IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="3223" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3222" isOblig="0"/>
+      </element>
+      <element code="C553" name="RELATED LOCATION TWO IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="3233" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3232" isOblig="0"/>
+      </element>
+      <element att-ref="5479" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="CTA">
+      <element att-ref="3139" isOblig="0" occurence="1"/>
+      <element code="C056" name="DEPARTMENT OR EMPLOYEE DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="3413" isOblig="0"/>
+        <attr-ref code="3412" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="COM">
+      <element code="C076" name="COMMUNICATION CONTACT" isOblig="0" occurence="3">
+        <attr-ref code="3148" isOblig="0"/>
+        <attr-ref code="3155" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="NAD">
+      <element att-ref="3035" isOblig="1" occurence="1"/>
+      <element code="C082" name="PARTY IDENTIFICATION DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="3039" isOblig="1"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+      </element>
+      <element code="C058" name="NAME AND ADDRESS" isOblig="0" occurence="1">
+        <attr-ref code="3124" isOblig="1"/>
+        <attr-ref code="3124" isOblig="0"/>
+        <attr-ref code="3124" isOblig="0"/>
+        <attr-ref code="3124" isOblig="0"/>
+        <attr-ref code="3124" isOblig="0"/>
+      </element>
+      <element code="C080" name="PARTY NAME" isOblig="0" occurence="1">
+        <attr-ref code="3036" isOblig="1"/>
+        <attr-ref code="3036" isOblig="0"/>
+        <attr-ref code="3036" isOblig="0"/>
+        <attr-ref code="3036" isOblig="0"/>
+        <attr-ref code="3036" isOblig="0"/>
+        <attr-ref code="3045" isOblig="0"/>
+      </element>
+      <element code="C059" name="STREET" isOblig="0" occurence="1">
+        <attr-ref code="3042" isOblig="1"/>
+        <attr-ref code="3042" isOblig="0"/>
+        <attr-ref code="3042" isOblig="0"/>
+        <attr-ref code="3042" isOblig="0"/>
+      </element>
+      <element att-ref="3164"/>
+      <element code="C819" name="COUNTRY SUB-ENTITY DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="3229" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3228" isOblig="0"/>
+      </element>
+      <element att-ref="3251" isOblig="0" occurence="1"/>
+      <element att-ref="3207" isOblig="0" occurence="1"/>
+    </balise>  
+    <balise nom="CNI">
+      <element att-ref="1490" isOblig="0" occurence="1"/>
+      <element code="C503" name="DOCUMENT / MESSAGE DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="1004" isOblig="0"/>
+        <attr-ref code="1373" isOblig="0"/>
+        <attr-ref code="1366" isOblig="0"/>
+        <attr-ref code="3453" isOblig="0"/>
+        <attr-ref code="1056" isOblig="0"/>
+        <attr-ref code="1060" isOblig="0"/>
+      </element>
+      <element att-ref="1312" isOblig="0" occurence="1"/>
+    </balise>    
+    <balise nom="GID">
+      <element att-ref="1496" isOblig="0" occurence="1"/>
+      <element code="C213" name="NUMBER AND TYPE OF PACKAGES" isOblig="0" occurence="1">
+        <attr-ref code="7224" isOblig="0"/>
+        <attr-ref code="7065" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="7064" isOblig="0"/>
+        <attr-ref code="7233" isOblig="0"/>
+      </element>
+      <element code="C213" name="NUMBER AND TYPE OF PACKAGES" isOblig="0" occurence="1">
+        <attr-ref code="7224" isOblig="0"/>
+        <attr-ref code="7065" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="7064" isOblig="0"/>
+        <attr-ref code="7233" isOblig="0"/>
+      </element>
+      <element code="C213" name="NUMBER AND TYPE OF PACKAGES" isOblig="0" occurence="1">
+        <attr-ref code="7224" isOblig="0"/>
+        <attr-ref code="7065" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="7064" isOblig="0"/>
+        <attr-ref code="7233" isOblig="0"/>
+      </element>
+      <element code="C213" name="NUMBER AND TYPE OF PACKAGES" isOblig="0" occurence="1">
+        <attr-ref code="7224" isOblig="0"/>
+        <attr-ref code="7065" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="7064" isOblig="0"/>
+        <attr-ref code="7233" isOblig="0"/>
+      </element>
+      <element code="C213" name="NUMBER AND TYPE OF PACKAGES" isOblig="0" occurence="1">
+        <attr-ref code="7224" isOblig="0"/>
+        <attr-ref code="7065" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="7064" isOblig="0"/>
+        <attr-ref code="7233" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="FTX">
+      <element att-ref="4451" isOblig="1" occurence="1"/>
+      <element att-ref="4453" isOblig="0" occurence="1"/>
+      <element code="C107" name="TEXT REFERENCE" isOblig="0" occurence="1">
+        <attr-ref code="4441" isOblig="1"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+      </element>
+      <element code="C108" name="TEXT LITERAL" isOblig="0" occurence="1">
+        <attr-ref code="4440" isOblig="1"/>
+        <attr-ref code="4440" isOblig="0"/>
+        <attr-ref code="4440" isOblig="0"/>
+        <attr-ref code="4440" isOblig="0"/>
+        <attr-ref code="4440" isOblig="0"/>
+      </element>
+      <element att-ref="3453" isOblig="0" occurence="1"/>
+      <element att-ref="4447" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="PCI">
+      <element att-ref="4233" isOblig="0" occurence="1"/>
+      <element code="C210" name="MARKS / LABELS" isOblig="0" occurence="1">
+        <attr-ref code="7102" isOblig="1"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+        <attr-ref code="7102" isOblig="0"/>
+      </element>
+      <element att-ref="8275" isOblig="0" occurence="1"/>
+      <element code="C827" name="TYPE OF MARKING" isOblig="0" occurence="1">
+        <attr-ref code="7511" isOblig="1"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="SGP">
+      <element code="C237" name="EQUIPMENT IDENTIFICATION" isOblig="1" occurence="1">
+        <attr-ref code="8260" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3207" isOblig="0"/>
+      </element>
+      <element att-ref="7224" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="MEA">
+      <element att-ref="6311" isOblig="1" occurence="1"/>
+      <element code="C502" name="MEASUREMENT DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="6313" isOblig="0"/>
+        <attr-ref code="6321" isOblig="0"/>
+        <attr-ref code="6155" isOblig="0"/>
+        <attr-ref code="6154" isOblig="0"/>
+      </element>
+      <element code="C174" name="VALUE/RANGE" isOblig="0" occurence="1">
+        <attr-ref code="6411" isOblig="1"/>
+        <attr-ref code="6314" isOblig="0"/>
+        <attr-ref code="6162" isOblig="0"/>
+        <attr-ref code="6152" isOblig="0"/>
+        <attr-ref code="6432" isOblig="0"/>
+      </element>
+      <element att-ref="7383" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="ERC">
+      <element code="C901" name="APPLICATION ERROR DETAIL" isOblig="1" occurence="1">
+        <attr-ref code="9321" isOblig="1"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="DGS">
+      <element att-ref="8273" isOblig="0" occurence="1"/>
+      <element code="C205" name="HAZARD CODE" isOblig="0" occurence="1">
+        <attr-ref code="8351" isOblig="1"/>
+        <attr-ref code="8078" isOblig="0"/>
+        <attr-ref code="8092" isOblig="0"/>
+      </element>
+      <element code="C234" name="UNDG INFORMATION" isOblig="0" occurence="1">
+        <attr-ref code="7124" isOblig="0"/>
+        <attr-ref code="7088" isOblig="0"/>
+      </element>
+      <element code="C223" name="DANGEROUS GOODS SHIPMENT FLASHPOINT" isOblig="0" occurence="1">
+        <attr-ref code="7106" isOblig="0"/>
+        <attr-ref code="6411" isOblig="0"/>
+      </element>
+      <element att-ref="8339" isOblig="0" occurence="1"/>
+      <element att-ref="8364" isOblig="0" occurence="1"/>
+      <element att-ref="8410" isOblig="0" occurence="1"/>
+      <element att-ref="8126" isOblig="0" occurence="1"/>
+      <element code="C235" name="HAZARD IDENTIFICATION PLACARD DETAILS" isOblig="0" occurence="1">
+        <attr-ref code="8158" isOblig="0"/>
+        <attr-ref code="8186" isOblig="0"/>
+      </element>
+      <element code="C236" name="DANGEROUS GOODS LABEL" isOblig="0" occurence="1">
+        <attr-ref code="8246" isOblig="0"/>
+        <attr-ref code="8246" isOblig="0"/>
+        <attr-ref code="8246" isOblig="0"/>
+      </element>
+      <element att-ref="8255" isOblig="0" occurence="1"/>
+      <element att-ref="8325" isOblig="0" occurence="1"/>
+      <element att-ref="8211" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="DIM">
+      <element att-ref="6145" isOblig="0" occurence="1"/>
+      <element code="C211" name="DIMENSIONS" isOblig="1" occurence="1">
+        <attr-ref code="6411" isOblig="1"/>
+        <attr-ref code="6168" isOblig="0"/>
+        <attr-ref code="6140" isOblig="0"/>
+        <attr-ref code="6008" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="EQA">
+      <element att-ref="8053" isOblig="1" occurence="1"/>
+      <element code="C237" name="EQUIPMENT IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="8260" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3207" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="EQD">
+      <element att-ref="8053" isOblig="1" occurence="1"/>
+      <element code="C237" name="EQUIPMENT IDENTIFICATION" isOblig="0" occurence="1">
+        <attr-ref code="8260" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="3207" isOblig="0"/>
+      </element>
+      <element code="C224" name="EQUIPMENT SIZE AND TYPE" isOblig="0" occurence="1">
+        <attr-ref code="8155" isOblig="0"/>
+        <attr-ref code="1131" isOblig="0"/>
+        <attr-ref code="3055" isOblig="0"/>
+        <attr-ref code="8154" isOblig="0"/>
+      </element>
+      <element att-ref="8077" isOblig="0" occurence="1"/>
+      <element att-ref="8249" isOblig="0" occurence="1"/>
+      <element att-ref="8169" isOblig="0" occurence="1"/>
+    </balise>
+    <balise nom="TMP">
+      <element att-ref="6245" isOblig="1" occurence="1"/>
+      <element code="C239" name="TEMPERATURE SETTING" isOblig="0" occurence="1">
+        <attr-ref code="6246" isOblig="0"/>
+        <attr-ref code="6411" isOblig="0"/>
+      </element>
+    </balise>
+    <balise nom="UNT">
+      <element att-ref="0074" isOblig="1" occurence="1"/>
+      <element att-ref="0062" isOblig="1" occurence="1"/>
+    </balise>
+    <balise nom="UNZ">
+      <element att-ref="0036" isOblig="1" occurence="1"/>
+      <element att-ref="0020" isOblig="1" occurence="1"/>
+    </balise>
+  </balises>
+  <schemas>
+    <schema code="IFTDGN" nom="Dangerous goods notification message" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="TDT" occurence="1">
+        <segGroupDesc name="SG_3" initBalise="LOC" occurence="99"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_4" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_5" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_6" initBalise="EQD" occurence="999"/>
+      <segGroupDesc name="SG_7" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_8" initBalise="TDT" occurence="1">
+          <segGroupDesc name="SG_9" initBalise="LOC" occurence="9"/>
+        </segGroupDesc>
+        <segGroupDesc name="SG_10" initBalise="NAD" occurence="2">
+          <segGroupDesc name="SG_11" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_12" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_14" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_15" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="IFTDGN" nom="Dangerous goods notification message" version="97A">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="TDT" occurence="1"/>
+      <segGroupDesc name="SG_3" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_4" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_5" initBalise="EQD" occurence="999"/>
+      <segGroupDesc name="SG_6" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_7" initBalise="TDT" occurence="1"/>
+        <segGroupDesc name="SG_8" initBalise="NAD" occurence="2">
+          <segGroupDesc name="SG_9" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_10" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_11" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_12" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="IFTDGN" nom="Dangerous goods notification message" version="95A">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="TDT" occurence="1"/>
+      <segGroupDesc name="SG_3" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_4" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_5" initBalise="EQD" occurence="999"/>
+      <segGroupDesc name="SG_6" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_7" initBalise="TDT" occurence="1"/>
+        <segGroupDesc name="SG_8" initBalise="NAD" occurence="2">
+          <segGroupDesc name="SG_9" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_10" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_11" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_12" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="IFTDGN" nom="Dangerous goods notification message" version="97GPMM">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="TDT" occurence="1"/>
+      <segGroupDesc name="SG_3" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_4" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_5" initBalise="EQD" occurence="999"/>
+      <segGroupDesc name="SG_6" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_7" initBalise="TDT" occurence="1"/>
+        <segGroupDesc name="SG_8" initBalise="NAD" occurence="6">
+          <segGroupDesc name="SG_9" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_10" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_11" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_12" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="TEST" nom="Test" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_4" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_5" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_7" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_8" initBalise="TDT" occurence="1">
+          <segGroupDesc name="SG_9" initBalise="LOC" occurence="9"/>
+        </segGroupDesc>
+        <segGroupDesc name="SG_10" initBalise="NAD" occurence="2">
+          <segGroupDesc name="SG_11" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_12" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_14" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_15" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="APERAK" nom="Application error and acknowledgement message" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="BGM" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="DOC" occurence="99"/>
+      <segGroupDesc name="SG_2" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_3" initBalise="NAD" occurence="9"/>
+      <segGroupDesc name="SG_4" initBalise="ERC" occurence="99999">
+        <segGroupDesc name="SG_5" initBalise="RFF" occurence="9"/>
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="BAPLIE" nom="Bayplan/stowage plan occupied and empty locations message" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="BGM" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_3" initBalise="CTA" occurence="99"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_4" initBalise="TDT" occurence="3"/>
+      <segGroupDesc name="SG_5" initBalise="LOC" occurence="9999">
+        <segGroupDesc name="SG_6" initBalise="EQD" occurence="1"/>
+        <segGroupDesc name="SG_7" initBalise="DGS" occurence="999"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+  
+  <schema code="IFTDGN" nom="Dangerous goods notification message" version="98B">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="TDT" occurence="1"/>
+      <segGroupDesc name="SG_3" initBalise="NAD" occurence="9">
+      <segGroupDesc name="SG_4" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_5" initBalise="EQD" occurence="999"/>
+      <segGroupDesc name="SG_6" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_7" initBalise="TDT" occurence="1"/>
+        <segGroupDesc name="SG_8" initBalise="NAD" occurence="6">
+          <segGroupDesc name="SG_9" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_10" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_11" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_12" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="TEST" nom="Test" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="UNB" occurence="1"/>
+      <segGroupDesc name="SG_4" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_5" initBalise="CTA" occurence="9"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_7" initBalise="CNI" occurence="999">
+        <segGroupDesc name="SG_8" initBalise="TDT" occurence="1">
+          <segGroupDesc name="SG_9" initBalise="LOC" occurence="9"/>
+        </segGroupDesc>
+        <segGroupDesc name="SG_10" initBalise="NAD" occurence="2">
+          <segGroupDesc name="SG_11" initBalise="CTA" occurence="1"/>
+        </segGroupDesc >
+        <segGroupDesc name="SG_12" initBalise="GID" occurence="99">
+          <segGroupDesc name="SG_13" initBalise="SGP" occurence="99"/>
+          <segGroupDesc name="SG_14" initBalise="DGS" occurence="1">
+            <segGroupDesc name="SG_15" initBalise="SGP" occurence="99"/>
+          </segGroupDesc >
+        </segGroupDesc >
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="APERAK" nom="Application error and acknowledgement message" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="BGM" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="DOC" occurence="99"/>
+      <segGroupDesc name="SG_2" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_3" initBalise="NAD" occurence="9"/>
+      <segGroupDesc name="SG_4" initBalise="ERC" occurence="99999">
+        <segGroupDesc name="SG_5" initBalise="RFF" occurence="9"/>
+      </segGroupDesc >
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+    <schema code="BAPLIE" nom="Bayplan/stowage plan occupied and empty locations message" version="04A">
+      <segGroupDesc name="SG_HEADER" initBalise="BGM" occurence="1"/>
+      <segGroupDesc name="SG_1" initBalise="RFF" occurence="9"/>
+      <segGroupDesc name="SG_2" initBalise="NAD" occurence="9">
+        <segGroupDesc name="SG_3" initBalise="CTA" occurence="99"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_4" initBalise="TDT" occurence="3"/>
+      <segGroupDesc name="SG_5" initBalise="LOC" occurence="9999">
+        <segGroupDesc name="SG_6" initBalise="EQD" occurence="1"/>
+        <segGroupDesc name="SG_7" initBalise="DGS" occurence="999"/>
+      </segGroupDesc>
+      <segGroupDesc name="SG_FOOTER" initBalise="UNT" occurence="1"/>
+    </schema>
+  </schemas>
+</edi-config>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<imdgXml>
+    <produit>
+        <amendement>36-12</amendement>
+        <arrimageSeparation>Catégorie A.  "Séparé des" composés de l'ammonium et des cyanures.</arrimageSeparation>
+        <classe>5.1</classe>
+        <dateMaj>2014-05-22T00:00:00+02:00</dateMaj>
+        <designationOffTransport>PERCHLORATE DE PLOMB, SOLIDE</designationOffTransport>
+        <documentations>
+            <code>F-H</code>
+            <libelle>Fiche Incendie n_F-H</libelle>
+            <numAmendement>36-12</numAmendement>
+            <type>F_INC</type>
+            <zones>
+                <libelle>FOS-SUR-MER</libelle>
+                <localisation>
+                    <altitude>0</altitude>
+                    <latitude>43.408181</latitude>
+                    <longitude>4.836087</longitude>
+                </localisation>
+                <locode>FRFOS</locode>
+            </zones>
+            <zones>
+                <libelle>MARSEILLE</libelle>
+                <localisation>
+                    <altitude>0</altitude>
+                    <latitude>43.351879</latitude>
+                    <longitude>5.334485</longitude>
+                </localisation>
+                <locode>FRMRS</locode>
+            </zones>
+        </documentations>
+        <documentations>
+            <code>S-Q</code>
+            <libelle>Fiche Deversement n_S-Q</libelle>
+            <numAmendement>36-12</numAmendement>
+            <type>F_DEV</type>
+            <zones>
+                <libelle>FOS-SUR-MER</libelle>
+                <localisation>
+                    <altitude>0</altitude>
+                    <latitude>43.408181</latitude>
+                    <longitude>4.836087</longitude>
+                </localisation>
+                <locode>FRFOS</locode>
+            </zones>
+            <zones>
+                <libelle>MARSEILLE</libelle>
+                <localisation>
+                    <altitude>0</altitude>
+                    <latitude>43.351879</latitude>
+                    <longitude>5.334485</longitude>
+                </localisation>
+                <locode>FRMRS</locode>
+            </zones>
+        </documentations>
+        <groupeEmballage>GR2</groupeEmballage>
+        <groupesSepaMatiere>
+            <code>07.</code>
+            <libelle>Métaux lourds et sels métalliques</libelle>
+        </groupesSepaMatiere>
+        <groupesSepaMatiere>
+            <code>09.</code>
+            <libelle>Plomb et composés</libelle>
+        </groupesSepaMatiere>
+        <groupesSepaMatiere>
+            <code>13.</code>
+            <libelle>Perchlorates</libelle>
+        </groupesSepaMatiere>
+        <interditClasse1>false</interditClasse1>
+        <marchandiseInterdite>false</marchandiseInterdite>
+        <numeroOnu>1470</numeroOnu>
+        <polluantMarin>P</polluantMarin>
+        <quantiteLimitee>
+            <unite>KG</unite>
+            <valeur>1.0</valeur>
+        </quantiteLimitee>
+        <refCorrectionOmi>36-12</refCorrectionOmi>
+        <risqueSubsidiaire1>6.1</risqueSubsidiaire1>
+        <risqueSubsidiaire2>NON</risqueSubsidiaire2>
+        <tempCrit>
+            <unite>CEL</unite>
+            <valeur>20.0</valeur>
+        </tempCrit>
+        <tempCritRequise>true</tempCritRequise>
+        <tempFlashPointMax>
+            <unite>CEL</unite>
+            <valeur>31.0</valeur>
+        </tempFlashPointMax>
+        <tempFlashPointMin>
+            <unite>CEL</unite>
+            <valeur>19.0</valeur>
+        </tempFlashPointMin>
+        <tempRegul>
+            <unite>CEL</unite>
+            <valeur>20.0</valeur>
+        </tempRegul>
+        <tempRegulRequise>true</tempRegulRequise>
+        <typeQuantiteExceptee>E2</typeQuantiteExceptee>
+        <variant>OP0-0</variant>
+    </produit>
+</imdgXml>

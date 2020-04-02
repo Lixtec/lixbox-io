@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="attributs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="attribut" type="attribut" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="balises">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="balise" type="balise" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="edi-config">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="attributs"/>
+        <xs:element ref="balises"/>
+        <xs:element ref="schemas"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="schemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="schema" type="schema" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="attr-ref">
+    <xs:attribute name="code" type="xs:string" use="required"/>
+    <xs:attribute name="isOblig" type="xs:boolean" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="element">
+    <xs:sequence>
+      <xs:element name="attr-ref" type="attr-ref" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="code" type="xs:string"/>
+    <xs:attribute name="name" type="xs:string"/>
+    <xs:attribute name="isOblig" type="xs:boolean"/>
+    <xs:attribute name="occurence" type="xs:int"/>
+    <xs:attribute name="att-ref" type="xs:string"/>
+  </xs:complexType>
+  <xs:complexType name="balise">
+    <xs:sequence>
+      <xs:element name="element" type="element" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="nom" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="attribut">
+    <xs:attribute name="code" type="xs:string" use="required"/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="size" type="xs:int" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="segGroupDesc">
+    <xs:sequence>
+      <xs:element name="segGroupDesc" type="segGroupDesc" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="initBalise" type="xs:string" use="required"/>
+    <xs:attribute name="occurence" type="xs:int" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="schema">
+    <xs:sequence>
+      <xs:element name="segGroupDesc" type="segGroupDesc" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="code" type="xs:string" use="required"/>
+    <xs:attribute name="nom" type="xs:string" use="required"/>
+    <xs:attribute name="version" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:schema>

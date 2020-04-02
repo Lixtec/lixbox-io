@@ -1,0 +1,56 @@
+project(':lixbox-document'){
+	dependencies {    
+        //lixbox
+        compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
+        
+        //divers        
+        compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+        compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
+        
+        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.template.velocity', version: version_xdocreport
+        
+        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.docx', version: version_xdocreport
+        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.pptx', version: version_xdocreport
+        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.odt', version: version_xdocreport
+        
+        compile (group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.docx.docx4j', version: version_xdocreport)
+        {
+            exclude group: 'log4j', module:'log4j'
+        }                
+        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.odt.odfdom', version: version_xdocreport
+        
+        compile ('net.sourceforge.jexcelapi:jxl:2.6.12')
+        {
+            exclude group: 'log4j', module:'log4j'
+        } 
+		compile group: 'log4j', name: 'log4j', version: '1.2.17'
+        
+        
+        compile 'org.apache.poi:poi:4.1.2'
+        compile 'org.apache.poi:poi-ooxml:4.1.2'
+        compile 'org.apache.poi:poi-ooxml-schemas:4.1.2'
+        compile 'org.apache.poi:poi-scratchpad:4.1.2'
+        compile 'org.apache.poi:ooxml-schemas:1.4'
+
+        // ================================ Test ================================
+		testCompile 'junit:junit:4.12'
+	}
+    
+    eclipse{
+        wtp{
+            facet {
+                facet name: 'jst.cdi', version: '2.0'
+                facet name: 'jst.utility', version: '1.0'
+            }
+        }
+    }
+	
+	sonarqube {
+		properties {
+           property "sonar.projectKey", "${config.desc_project.artefact.group}.${rootProject.name}:${project.name}"
+           property "sonar.projectName", "${project.name}"
+		   property "sonar.sources","src/main"
+		   property "sonar.tests","src/test"
+        }
+	}	
+}
