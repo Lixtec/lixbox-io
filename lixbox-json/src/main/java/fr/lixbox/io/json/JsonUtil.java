@@ -48,9 +48,9 @@ public class JsonUtil
         
     
     
-    public static Object transformJsonToObject(String json, TypeReference<?> typeRef)
+    public static <T> T transformJsonToObject(String json, TypeReference<T> typeRef)
     {
-        Object result = null;
+        T result = null;
         ObjectMapper mapper = new ObjectMapper();
         try 
         {            
@@ -87,14 +87,15 @@ public class JsonUtil
     
     
         
-    public static Object transformJsonToObjectWithType(String json)
+    @SuppressWarnings("unchecked")
+    public static <T> T transformJsonToObjectWithType(String json)
     {
-        Object result = null;
+        T result = null;
         ObjectMapper mapper = new ObjectMapper();
         try 
         {   
             List<?> object = mapper.readValue(json, new TypeReference<List<?>>(){});            
-            result = mapper.readValue((String)object.get(1), Class.forName((String) object.get(0)));
+            result = (T) mapper.readValue((String)object.get(1), Class.forName((String) object.get(0)));
         } 
         catch (IOException | ClassNotFoundException e) 
         {
