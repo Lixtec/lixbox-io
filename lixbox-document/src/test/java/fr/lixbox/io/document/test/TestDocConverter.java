@@ -37,8 +37,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
-import fr.lixbox.io.document.util.ReportUtil;
 import fr.lixbox.common.exceptions.BusinessException;
+import fr.lixbox.io.document.util.ReportUtil;
 import fr.opensagres.xdocreport.template.formatter.FieldsMetadata;
 
 public class TestDocConverter implements Serializable
@@ -86,7 +86,6 @@ public class TestDocConverter implements Serializable
             context.put("date_etd", "12/12/2018 12:30");            
             FieldsMetadata metadatas = reportUtil.getFieldsMetadata();      
             reportUtil.generateReportDocxToDocx(out, context, metadatas);
-            //FileUtils.writeByteArrayToFile(new File("./test.docx"), out.toByteArray());
             Assert.assertTrue("La taille du rendu est incorrecte. attendue: 15180 bytes, obtenue: "+out.size()+" bytes", 15180==out.size());
         }
         catch (BusinessException e)
@@ -123,7 +122,6 @@ public class TestDocConverter implements Serializable
             context.put("date_etd", "12/12/2018 12:30");            
             FieldsMetadata metadatas = reportUtil.getFieldsMetadata();      
             reportUtil.generateReportDocxToPdf(out, context, metadatas);
-//            FileUtils.writeByteArrayToFile(new File("./test.pdf"), out.toByteArray());            
             Assert.assertTrue("La taille du rendu est incorrecte. attendue: 55786 bytes, obtenue: "+out.size()+" bytes", 0<out.size());
         }
         catch (BusinessException e)
