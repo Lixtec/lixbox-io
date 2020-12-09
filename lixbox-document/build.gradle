@@ -3,16 +3,14 @@ project(':lixbox-document'){
         //lixbox
         compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
         
-        //divers        
+        //divers
         compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
         compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
         
         compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.template.velocity', version: version_xdocreport
-        
         compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.docx', version: version_xdocreport
         compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.pptx', version: version_xdocreport
         compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.odt', version: version_xdocreport
-        
         compile (group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.docx.docx4j', version: version_xdocreport)
         {
             exclude group: 'log4j', module:'log4j'
@@ -26,14 +24,17 @@ project(':lixbox-document'){
 		compile group: 'log4j', name: 'log4j', version: '1.2.17'
         
         
-        compile 'org.apache.poi:poi:4.1.2'
-        compile 'org.apache.poi:poi-ooxml:4.1.2'
-        compile 'org.apache.poi:poi-ooxml-schemas:4.1.2'
-        compile 'org.apache.poi:poi-scratchpad:4.1.2'
-        compile 'org.apache.poi:ooxml-schemas:1.4'
+        compile group: 'org.apache.poi', name:'poi', version: version_poi
+        compile group: 'org.apache.poi', name:'poi-ooxml', version: version_poi
+        compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
+        compile group: 'org.apache.poi', name:'poi-scratchpad', version: version_poi
+        compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
+
 
         // ================================ Test ================================
-		testCompile 'junit:junit:4.12'
+		testCompile group: 'junit', name:'junit', version: version_junit
+		testCompile group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.3.3'
+
 	}
     
     jar{

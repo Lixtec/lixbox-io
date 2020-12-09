@@ -5,7 +5,7 @@ desc_project{
     withRegistry=false
     withQuarkus=false
     version{
-        majorVersion=8
+        majorVersion=11
         mediumVersion=1
         minorVersion=1
     }
@@ -51,7 +51,7 @@ artifactoryRepository{
 
 sonarRepository{
 	host{
-		url="https://quality.service.lixtec.fr"
+		url="https://quality.service.dev.lan"
         username="lixbox.sonar.bot"
         password="@L1xb0x!"
 	}
