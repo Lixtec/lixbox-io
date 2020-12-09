@@ -51,7 +51,7 @@ artifactoryRepository{
 
 sonarRepository{
 	host{
-		url="https://quality.service.dev.lan"
+		url="https://quality.service.lixtec.fr"
         username="lixbox.sonar.bot"
         password="@L1xb0x!"
 	}
