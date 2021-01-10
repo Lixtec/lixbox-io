@@ -6,17 +6,6 @@ project(':lixbox-document'){
         //divers
         compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
         compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
-        
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.template.velocity', version: version_xdocreport
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.docx', version: version_xdocreport
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.pptx', version: version_xdocreport
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.odt', version: version_xdocreport
-        compile (group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.docx.docx4j', version: version_xdocreport)
-        {
-            exclude group: 'log4j', module:'log4j'
-        }                
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.odt.odfdom', version: version_xdocreport
-        
         compile ('net.sourceforge.jexcelapi:jxl:2.6.12')
         {
             exclude group: 'log4j', module:'log4j'
@@ -29,6 +18,13 @@ project(':lixbox-document'){
         compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
         compile group: 'org.apache.poi', name:'poi-scratchpad', version: version_poi
         compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
+        
+        //docx4j
+        compile group: 'org.docx4j', name: 'docx4j-core', version: '11.2.8'
+        compile group: 'org.docx4j', name: 'docx4j-JAXB-ReferenceImpl', version: '11.2.8'
+        compile group: 'org.docx4j', name: 'docx4j-export-fo', version: '11.2.8'
+//        compile group: 'com.googlecode.jaxb-namespaceprefixmapper-interfaces', name:'JAXBNamespacePrefixMapper', version:'2.2.4'
+
 
 
         // ================================ Test ================================
