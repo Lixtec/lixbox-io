@@ -83,7 +83,7 @@ public class TestReportUtilConverter implements Serializable
             variables.put("date_eta", "12/12/2018 12:30");
             variables.put("date_etd", "12/12/2018 12:30");
             reportUtil.generateReportDocxToDocx(out, variables);
-            Assert.assertTrue("La taille du rendu est incorrecte. attendue: 34480 bytes, obtenue: "+out.size()+" bytes", 34460<out.size()&&34490>out.size());
+            Assert.assertTrue("La taille du rendu est incorrecte. attendue: 34480 bytes, obtenue: "+out.size()+" bytes", 34440<out.size()&&34490>out.size());
         }
         catch (BusinessException e)
         {

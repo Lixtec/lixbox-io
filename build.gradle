@@ -24,7 +24,7 @@ buildscript {
 }
 plugins {
     id "org.ajoberstar.grgit" version "3.1.1"
-    id "com.github.spotbugs" version "3.0.0"
+    id "com.github.spotbugs" version "4.2.0"
     id 'maven-publish'
 }
 
@@ -371,7 +371,7 @@ subprojects {
     }
    
     jacoco{
-        toolVersion = "0.8.2"
+        toolVersion = "0.8.6"
     }
     
     jacocoTestReport {
@@ -383,17 +383,10 @@ subprojects {
     }
 
     spotbugs {
-        toolVersion = '3.1.12'
+        toolVersion = '4.2.0'
         effort = 'max'
-        excludeFilter file('../gradle/config/findbugsExcludeFilter.xml')
+        excludeFilter = file('../gradle/config/findbugsExcludeFilter.xml')
     }
-    tasks.withType(com.github.spotbugs.SpotBugsTask) {
-        reports {
-            xml.enabled false
-            html.enabled true
-        }
-    }
-  
     
     jar{
         manifest {
@@ -445,6 +438,5 @@ subprojects {
     }
     
     tasks.eclipse.dependsOn tasks.cleanEclipse    
-    tasks.check.dependsOn(tasks.generateLicenseReport);
     tasks.check.dependsOn(tasks.dependencyCheckAnalyze);
 }

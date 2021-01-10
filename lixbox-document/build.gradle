@@ -20,10 +20,9 @@ project(':lixbox-document'){
         compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
         
         //docx4j
-        compile group: 'org.docx4j', name: 'docx4j-core', version: '11.2.8'
-        compile group: 'org.docx4j', name: 'docx4j-JAXB-ReferenceImpl', version: '11.2.8'
-        compile group: 'org.docx4j', name: 'docx4j-export-fo', version: '11.2.8'
-//        compile group: 'com.googlecode.jaxb-namespaceprefixmapper-interfaces', name:'JAXBNamespacePrefixMapper', version:'2.2.4'
+        compile group: 'org.docx4j', name: 'docx4j-core', version: version_docx4j
+        compile group: 'org.docx4j', name: 'docx4j-JAXB-ReferenceImpl', version: version_docx4j
+        compile group: 'org.docx4j', name: 'docx4j-export-fo', version: version_docx4j
 
 
 
