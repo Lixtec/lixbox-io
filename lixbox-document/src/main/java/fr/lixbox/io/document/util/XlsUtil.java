@@ -86,12 +86,11 @@ public class XlsUtil
      *  en fichier formate CSV avec le separateur de champs transmis en parametre.
      *  
      *  @param fichierXls
-     *  @param _separateurChamps
+     *  @param separateurChamps
      */
-	public static File convertXlsToCsv(File fichierXls, String _separateurChamps, Charset charset)
+	public static File convertXlsToCsv(File fichierXls, String separateurChamps, Charset charset)
     {
-        String separateurChamps = StringUtil.isEmpty(_separateurChamps)?";":_separateurChamps;
-    	
+        separateurChamps = StringUtil.isEmpty(separateurChamps)?";":separateurChamps;
         File f = null;
         if (((null != fichierXls) && (null != fichierXls.getAbsolutePath())) && (fichierXls.getAbsolutePath().length() > 0))
         {
