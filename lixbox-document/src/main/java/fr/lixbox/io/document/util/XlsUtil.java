@@ -29,6 +29,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.nio.charset.Charset;
 import java.util.Locale;
 
 import org.apache.commons.logging.Log;
@@ -72,10 +73,10 @@ public class XlsUtil
      * @param fichierXls
      * @return
      */
-    public static File convertXlsToCsv(File fichierXls)
+    public static File convertXlsToCsv(File fichierXls, Charset charset)
     {
     	// SEPARATEUR DE CHAMP PAR DEFAUT D UN FICHIER CSV EST ";"
-    	return convertXlsToCsv(fichierXls, ";");
+    	return convertXlsToCsv(fichierXls, ";", charset);
     }
 
 
@@ -87,7 +88,7 @@ public class XlsUtil
      *  @param fichierXls
      *  @param _separateurChamps
      */
-	public static File convertXlsToCsv(File fichierXls, String _separateurChamps)
+	public static File convertXlsToCsv(File fichierXls, String _separateurChamps, Charset charset)
     {
         String separateurChamps = StringUtil.isEmpty(_separateurChamps)?";":_separateurChamps;
     	
@@ -99,18 +100,17 @@ public class XlsUtil
             f.deleteOnExit();
             LOG.info("Conversion du fichier " + fichierXls.getAbsolutePath() + " au format CSV ...");
          
-            final String encoding = "ISO8859-1";
-            
             try
             (                    
                 OutputStream os = new FileOutputStream(f);
-                OutputStreamWriter osw = new OutputStreamWriter(os, encoding);  
+                OutputStreamWriter osw = new OutputStreamWriter(os, charset);
                 BufferedWriter bw = new BufferedWriter(osw); 
             )
             {
                 // OUTPUT FILE
                 final WorkbookSettings ws = new WorkbookSettings();
                 ws.setLocale(new Locale("fr", "FR"));
+                ws.setEncoding(charset.displayName());
                 final Workbook workbook = Workbook.getWorkbook(fichierXls, ws);
                 
                 // Gets the sheets from workbook
@@ -143,7 +143,7 @@ public class XlsUtil
                             for (int j = 1; j < row.length; j++)
                             {
                                 bw.write(';');
-                                if (CellType.DATE.equals(row[j].getType()))                                    
+                                if (CellType.DATE.equals(row[j].getType()))
                                 {
                                     bw.write(DateUtil.format(((DateCell)row[j]).getDate(),"dd/MM/yyyy"));
                                 }
