@@ -27,25 +27,24 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.docx4j.model.datastorage.migration.VariablePrepare;
-import org.docx4j.model.fields.merge.DataFieldName;
-import org.docx4j.model.fields.merge.MailMerger;
-import org.docx4j.model.fields.merge.MailMerger.OutputField;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.event.EventCartridge;
+import org.apache.velocity.app.event.ReferenceInsertionEventHandler;
 
 import fr.lixbox.common.exceptions.BusinessException;
 import fr.lixbox.common.util.ExceptionUtil;
 import fr.lixbox.io.document.converter.Converter;
 import fr.lixbox.io.document.converter.DocxToPDFConverter;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
+import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
+import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
 
 /**
  * Cet utilitaire genere un rapport depuis un template word vers un flux binaire.
@@ -58,17 +57,17 @@ public class ReportUtil
     private static final Log LOG = LogFactory.getLog(ReportUtil.class);    
     private static final String REPORT_UTIL_CODE = "RPTUTL";
 
-    private InputStream template;
+    private IXDocReport report = null;
     
     
 
     // ----------- Methode -----------
-    public ReportUtil(InputStream template) throws BusinessException
+    public ReportUtil(InputStream in, String reportId) throws BusinessException
     {       
         try        
         {
             LOG.debug("ReportUtil cree");
-            this.template = template;
+            report = XDocReportRegistry.getRegistry().loadReport(in, reportId+RandomUtils.nextDouble(), TemplateEngineKind.Velocity);
         }
         catch (Exception e)
         {
@@ -78,33 +77,31 @@ public class ReportUtil
     
     
     
-    public void generateReportDocxToDocx(OutputStream out, Map<String, String> datas) 
+    public FieldsMetadata getFieldsMetadata()
+    {
+        return report.createFieldsMetadata();
+    }
+    
+    
+    
+    public void generateReportDocxToDocx(OutputStream out, 
+            Map<String, Object> datas, FieldsMetadata metadatas) 
         throws BusinessException
     {
         try
         {
-            WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.load(template);
-            VariablePrepare.prepare(wordMLPackage);
-            MainDocumentPart mainDocumentPart = wordMLPackage.getMainDocumentPart();
-            mainDocumentPart.addStyledParagraphOfText("Title", "Hello World!");
-            mainDocumentPart.addParagraphOfText("Welcome To Baeldung");
-            mainDocumentPart.variableReplace(datas);
-            
-            List<Map<DataFieldName, String>> mergedFields = new ArrayList<>();
-            Map<DataFieldName, String> item = new HashMap<>();
-            for (Entry<String, String> entry : datas.entrySet())
-            {
-	            item.put(new DataFieldName("$"+entry.getKey()), entry.getValue());
-	            mergedFields.add(item);
-            }
-            MailMerger.setMERGEFIELDInOutput(OutputField.REMOVED);
-            MailMerger.performMerge(wordMLPackage, item, true);
-            
+            //remplissage du contexte
+            IContext context = report.createContext();  
+            EventCartridge eventCartridge = new EventCartridge();
+            ReferenceInsertionEventHandler rieh = (String s, Object o) -> {if (o == null) { return ""; } return o; };
+            eventCartridge.addEventHandler(rieh);            
+            eventCartridge.attachToContext((VelocityContext) context);         
+            report.setFieldsMetadata(metadatas);
+            context.putMap(datas);
             
             //generate word
             long start = System.currentTimeMillis();
-            wordMLPackage.save(out);
-            out.close();
+            report.process(context, out);
             LOG.debug("Report processed in " + (System.currentTimeMillis() - start) + " ms");
         }
         catch (Exception e)
@@ -113,17 +110,20 @@ public class ReportUtil
         }
     }
 
-
-
-    public void generateReportDocxToPdf(OutputStream out, Map<String, String> datas) 
+        
+    
+    public void generateReportDocxToPdf(OutputStream out, 
+            Map<String, Object> datas, FieldsMetadata metadatas) 
         throws BusinessException
     {        
         byte[] reportDatas=new byte[0];
         
         //generation du report
-        try (ByteArrayOutputStream outTmp = new ByteArrayOutputStream())
+        try (
+                ByteArrayOutputStream outTmp = new ByteArrayOutputStream();
+        )
         {
-            generateReportDocxToDocx(outTmp, datas);
+            generateReportDocxToDocx(outTmp, datas, metadatas);
             reportDatas = outTmp.toByteArray();
         }
         catch (Exception e)

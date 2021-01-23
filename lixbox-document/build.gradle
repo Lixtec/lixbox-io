@@ -4,6 +4,8 @@ project(':lixbox-document'){
         compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
         
         //divers
+        compile group: 'oro', name: 'oro', version: '2.0.8'
+        
         compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
         compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
         compile ('net.sourceforge.jexcelapi:jxl:2.6.12')
@@ -11,7 +13,6 @@ project(':lixbox-document'){
             exclude group: 'log4j', module:'log4j'
         } 
 		compile group: 'log4j', name: 'log4j', version: '1.2.17'
-        
         
         compile group: 'org.apache.poi', name:'poi', version: version_poi
         compile group: 'org.apache.poi', name:'poi-ooxml', version: version_poi
@@ -22,7 +23,9 @@ project(':lixbox-document'){
         //docx4j
         compile group: 'org.docx4j', name: 'docx4j-core', version: version_docx4j
         compile group: 'org.docx4j', name: 'docx4j-JAXB-ReferenceImpl', version: version_docx4j
-        compile group: 'org.docx4j', name: 'docx4j-export-fo', version: version_docx4j
+        compile (group: 'org.docx4j', name: 'docx4j-export-fo', version: version_docx4j) {
+        	exclude (group:'xml-apis')
+        }
 
 
 

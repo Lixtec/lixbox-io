@@ -24,18 +24,22 @@
 package fr.lixbox.io.document.test;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
+import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
-import fr.lixbox.common.exceptions.BusinessException;
 import fr.lixbox.io.document.util.ReportUtil;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
+import fr.lixbox.common.exceptions.BusinessException;
 
 public class TestReportUtilConverter implements Serializable
 {
@@ -45,13 +49,13 @@ public class TestReportUtilConverter implements Serializable
 
 
     // ----------- Methode(s) -----------
-    @Before
+    @After
     public void tearOf() throws IOException
     {
-//        if (new File("/test.docx").exists())
-//        {
-//            FileUtils.forceDelete(new File("/test.docx"));
-//        }
+        if (new File("./test.docx").exists())
+        {
+            FileUtils.forceDelete(new File("./test.docx"));
+        }
     }
     
     
@@ -62,28 +66,28 @@ public class TestReportUtilConverter implements Serializable
         try
         (   
             ByteArrayOutputStream out = new ByteArrayOutputStream();
-//        		FileOutputStream out = new FileOutputStream(new File("/test.docx"));
             InputStream in = TestReportUtilConverter.class.getResourceAsStream("/template/B1_FAL1_template.docx");
         )
         {   
-            ReportUtil reportUtil = new ReportUtil(in);
+            ReportUtil reportUtil = new ReportUtil(in, Calendar.getInstance().getTimeInMillis()+"");
                         
             //remplissage du contexte
-            Map<String, String> variables = new HashMap<>();
-            variables.put("colour", "ma couleur");
-            variables.put("folder", "test");
-            variables.put("XA","X");
-            variables.put("XD", "");
-            variables.put("name_type", "mon navire");
-            variables.put("imo_number", "IMO1234586");
-            variables.put("call_sign", "123CALL");
-            variables.put("voyage_number", "VN_1234");
-            variables.put("port_call", "Arrival : FRMRS");
-            variables.put("flag_state", "FR");
-            variables.put("date_eta", "12/12/2018 12:30");
-            variables.put("date_etd", "12/12/2018 12:30");
-            reportUtil.generateReportDocxToDocx(out, variables);
-            Assert.assertTrue("La taille du rendu est incorrecte. attendue: 34480 bytes, obtenue: "+out.size()+" bytes", 34440<out.size()&&34490>out.size());
+            Map<String, Object> context = new HashMap<String, Object>();
+            context.put("folder", "test");
+            context.put("XA","X");
+            context.put("XD", "");
+            context.put("name_type", "mon navire");
+            context.put("imo_number", "IMO1234586");
+            context.put("call_sign", "123CALL");
+            context.put("voyage_number", "VN_1234");
+            context.put("port_call", "Arrival : FRMRS");
+            context.put("flag_state", "FR");
+            context.put("date_eta", "12/12/2018 12:30");
+            context.put("date_etd", "12/12/2018 12:30");            
+            FieldsMetadata metadatas = reportUtil.getFieldsMetadata();      
+            reportUtil.generateReportDocxToDocx(out, context, metadatas);
+            FileUtils.writeByteArrayToFile(new File("./test.docx"), out.toByteArray());
+            Assert.assertTrue("La taille du rendu est incorrecte. attendue: 29860 bytes, obtenue: "+out.size()+" bytes", 29860==out.size());
         }
         catch (BusinessException e)
         {
@@ -102,10 +106,10 @@ public class TestReportUtilConverter implements Serializable
             InputStream in = TestReportUtilConverter.class.getResourceAsStream("/template/B1_FAL1_template.docx");
         )
         {   
-            ReportUtil reportUtil = new ReportUtil(in);
+            ReportUtil reportUtil = new ReportUtil(in, Calendar.getInstance().getTimeInMillis()+"");
                         
             //remplissage du contexte
-            Map<String, String> context = new HashMap<>();
+            Map<String, Object> context = new HashMap<String, Object>();
             context.put("folder", "test");
             context.put("XA","X");
             context.put("XD", "");
@@ -116,8 +120,10 @@ public class TestReportUtilConverter implements Serializable
             context.put("port_call", "Arrival : FRMRS");
             context.put("flag_state", "FR");
             context.put("date_eta", "12/12/2018 12:30");
-            context.put("date_etd", "12/12/2018 12:30");
-            reportUtil.generateReportDocxToPdf(out, context);
+            context.put("date_etd", "12/12/2018 12:30");            
+            FieldsMetadata metadatas = reportUtil.getFieldsMetadata();      
+            reportUtil.generateReportDocxToPdf(out, context, metadatas);
+//            FileUtils.writeByteArrayToFile(new File("./test.pdf"), out.toByteArray());            
             Assert.assertTrue("La taille du rendu est incorrecte. attendue: 55786 bytes, obtenue: "+out.size()+" bytes", 0<out.size());
         }
         catch (BusinessException e)
