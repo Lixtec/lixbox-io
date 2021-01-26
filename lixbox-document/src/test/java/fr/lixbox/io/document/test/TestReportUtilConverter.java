@@ -123,7 +123,7 @@ public class TestReportUtilConverter implements Serializable
             context.put("date_etd", "12/12/2018 12:30");            
             FieldsMetadata metadatas = reportUtil.getFieldsMetadata();      
             reportUtil.generateReportDocxToPdf(out, context, metadatas);
-//            FileUtils.writeByteArrayToFile(new File("./test.pdf"), out.toByteArray());            
+            FileUtils.writeByteArrayToFile(new File("./test.pdf"), out.toByteArray());            
             Assert.assertTrue("La taille du rendu est incorrecte. attendue: 55786 bytes, obtenue: "+out.size()+" bytes", 0<out.size());
         }
         catch (BusinessException e)
