@@ -28,10 +28,6 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ISavable;
-
 /**
  * Base buffered region.
  */

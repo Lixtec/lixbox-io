@@ -28,12 +28,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.dump.DumperOptions;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * API of dumper. A dumper is enable to dump the whole context when report is generated :

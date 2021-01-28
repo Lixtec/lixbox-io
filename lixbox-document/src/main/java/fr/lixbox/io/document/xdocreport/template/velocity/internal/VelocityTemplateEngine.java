@@ -35,11 +35,10 @@ import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
-import fr.lixbox.io.document.xdocreport.template.AbstractTemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.velocity.VelocityFieldsExtractor;
 import fr.lixbox.io.document.xdocreport.core.EncodingConstants;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
+import fr.lixbox.io.document.xdocreport.template.AbstractTemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.FieldsExtractor;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
@@ -47,8 +46,7 @@ import fr.lixbox.io.document.xdocreport.template.config.ITemplateEngineConfigura
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 import fr.lixbox.io.document.xdocreport.template.velocity.VelocityConstants;
 import fr.lixbox.io.document.xdocreport.template.velocity.VelocityDocumentFormatter;
-import fr.lixbox.io.document.xdocreport.template.velocity.internal.XDocReportEscapeReference;
-import fr.lixbox.io.document.xdocreport.template.velocity.internal.XDocVelocityContext;
+import fr.lixbox.io.document.xdocreport.template.velocity.VelocityFieldsExtractor;
 
 /**
  * Velocity template engine implementation.

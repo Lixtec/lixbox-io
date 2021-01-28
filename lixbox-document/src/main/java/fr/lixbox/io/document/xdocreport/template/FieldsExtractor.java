@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.template.FieldExtractor;
 
 /**
  * Fields extractor used to extract fields declared in the XML entries template.

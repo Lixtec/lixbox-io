@@ -29,8 +29,6 @@ import java.util.Stack;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-
 /**
  * Buffered document.
  */

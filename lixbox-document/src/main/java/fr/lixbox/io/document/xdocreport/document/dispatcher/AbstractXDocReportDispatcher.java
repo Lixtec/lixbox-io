@@ -28,8 +28,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportController;
-import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportDispatcher;
 
 public abstract class AbstractXDocReportDispatcher<T extends IXDocReportController>
     implements IXDocReportDispatcher<T>

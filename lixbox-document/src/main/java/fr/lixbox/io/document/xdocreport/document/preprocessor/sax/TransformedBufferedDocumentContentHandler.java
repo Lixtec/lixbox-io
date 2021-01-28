@@ -33,17 +33,12 @@ import java.util.Map;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.document.DocumentContextHelper;
-import fr.lixbox.io.document.xdocreport.template.formatter.DirectivesStack;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ProcessRowResult;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.RowBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.TransformedBufferedDocument;
+import fr.lixbox.io.document.xdocreport.document.DocumentContextHelper;
 import fr.lixbox.io.document.xdocreport.template.formatter.Directive;
+import fr.lixbox.io.document.xdocreport.template.formatter.DirectivesStack;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

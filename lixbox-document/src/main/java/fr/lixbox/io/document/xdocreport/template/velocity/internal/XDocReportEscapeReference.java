@@ -29,8 +29,8 @@ import java.util.Collection;
 import org.apache.velocity.app.event.implement.EscapeXmlReference;
 import org.apache.velocity.runtime.RuntimeServices;
 
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.config.ReplaceText;
 import fr.lixbox.io.document.xdocreport.template.formatter.AbstractDocumentFormatter;
 import fr.lixbox.io.document.xdocreport.template.velocity.VelocityConstants;

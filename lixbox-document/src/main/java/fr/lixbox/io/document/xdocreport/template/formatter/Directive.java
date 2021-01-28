@@ -24,9 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.template.formatter;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
-
 public abstract class Directive
 {
 

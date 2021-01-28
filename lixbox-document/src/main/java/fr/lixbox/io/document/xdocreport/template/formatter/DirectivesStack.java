@@ -26,7 +26,6 @@ package fr.lixbox.io.document.xdocreport.template.formatter;
 
 import java.util.Stack;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.Directive;
 import fr.lixbox.io.document.xdocreport.template.formatter.Directive.DirectiveType;
 
 public class DirectivesStack

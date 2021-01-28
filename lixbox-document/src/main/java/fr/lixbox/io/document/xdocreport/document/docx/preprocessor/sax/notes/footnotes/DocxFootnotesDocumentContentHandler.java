@@ -29,7 +29,6 @@ import java.util.Map;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocxBufferedDocument;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.footnotes.FootnotesBufferedDocument;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 public class DocxFootnotesDocumentContentHandler

@@ -29,14 +29,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.ZipOutputStream;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 import fr.lixbox.io.document.xdocreport.document.dump.AbstractProjectDumper;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.document.dump.DumpHelper;
 import fr.lixbox.io.document.xdocreport.document.dump.DumperKind;
 import fr.lixbox.io.document.xdocreport.document.dump.IDumper;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 
 public class EclipseProjectDumper
     extends AbstractProjectDumper

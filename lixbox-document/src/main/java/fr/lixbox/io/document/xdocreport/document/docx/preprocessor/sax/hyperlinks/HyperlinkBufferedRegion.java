@@ -29,12 +29,9 @@ import java.util.List;
 
 import org.xml.sax.Attributes;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
+import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.RBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkInfo;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkUtils;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.InitialHyperlinkMap;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedAttribute;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ISavable;

@@ -29,11 +29,6 @@ import java.util.Stack;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocument;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.RowBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.TableBufferedRegion;
-
 public abstract class TransformedBufferedDocument
     extends BufferedDocument
 {

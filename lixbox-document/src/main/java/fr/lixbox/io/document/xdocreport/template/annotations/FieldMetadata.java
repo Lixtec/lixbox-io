@@ -32,8 +32,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import fr.lixbox.io.document.xdocreport.template.annotations.ImageMetadata;
-
 /**
  * This annotation should be attached to getter method which is called from Velocity or Freemarker Otherwise it will
  * have no effect

@@ -42,9 +42,9 @@ import fr.lixbox.io.document.converter.Converter;
 import fr.lixbox.io.document.converter.DocxToPDFConverter;
 import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * Cet utilitaire genere un rapport depuis un template word vers un flux binaire.

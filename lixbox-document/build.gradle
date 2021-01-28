@@ -13,13 +13,14 @@ project(':lixbox-document'){
         } 
 		compile group: 'log4j', name: 'log4j', version: '1.2.17'
         
+        
+        //poi
         compile group: 'org.apache.poi', name:'poi', version: version_poi
         compile group: 'org.apache.poi', name:'poi-ooxml', version: version_poi
         compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
         compile group: 'org.apache.poi', name:'poi-scratchpad', version: version_poi
         compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
-//        compile group: 'org.apache.poi', name:'ooxml-schemas', version:'1.4'
-        compile group: 'com.lowagie', name:'itext', version:'2.1.7'
+
         
         //docx4j
         compile group: 'org.docx4j', name: 'docx4j-core', version: version_docx4j

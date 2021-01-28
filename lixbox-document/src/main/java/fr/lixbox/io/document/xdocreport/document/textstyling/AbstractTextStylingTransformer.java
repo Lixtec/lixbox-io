@@ -27,11 +27,8 @@ package fr.lixbox.io.document.xdocreport.document.textstyling;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
-import fr.lixbox.io.document.xdocreport.document.textstyling.ITextStylingTransformer;
-import fr.lixbox.io.document.xdocreport.document.textstyling.ITransformResult;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 /**
  * Abstract class for text styling transformer.

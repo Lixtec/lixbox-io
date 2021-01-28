@@ -28,8 +28,6 @@ import java.io.IOException;
 import java.util.List;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
-import fr.lixbox.io.document.xdocreport.document.images.ImageProviderInfo;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 
 /**

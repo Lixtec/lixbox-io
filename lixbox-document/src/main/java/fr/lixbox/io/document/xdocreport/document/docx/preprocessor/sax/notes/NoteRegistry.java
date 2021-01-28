@@ -32,7 +32,6 @@ import java.util.List;
 import java.util.Map;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.NoteInfo;
 
 /**
  * Footnote/Endnote information registry.

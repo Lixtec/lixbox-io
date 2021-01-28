@@ -67,11 +67,6 @@ import fr.lixbox.io.document.xdocreport.core.utils.Base64Utility;
 import fr.lixbox.io.document.xdocreport.core.utils.DatatypeUtils;
 import fr.lixbox.io.document.xdocreport.document.images.ByteArrayImageProvider;
 import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
-import fr.lixbox.io.document.xdocreport.document.json.IJSONNode;
-import fr.lixbox.io.document.xdocreport.document.json.JSONArray;
-import fr.lixbox.io.document.xdocreport.document.json.JSONException;
-import fr.lixbox.io.document.xdocreport.document.json.JSONString;
-import fr.lixbox.io.document.xdocreport.document.json.JSONTokener;
 
 /**
  * Code modified for XDocReport (see "added by XDocReport" comment) :

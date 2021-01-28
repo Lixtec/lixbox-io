@@ -31,10 +31,6 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
 
-import fr.lixbox.io.document.xdocreport.document.json.JSONArray;
-import fr.lixbox.io.document.xdocreport.document.json.JSONException;
-import fr.lixbox.io.document.xdocreport.document.json.JSONObject;
-
 /*
  Copyright (c) 2002 JSON.org
 

@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlin
 
 import java.util.HashMap;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkInfo;
-
 /**
  * Map which stores the initial Relationship type of Hyperlink declared in the "word/_rels/document.xml.rels".
  * 

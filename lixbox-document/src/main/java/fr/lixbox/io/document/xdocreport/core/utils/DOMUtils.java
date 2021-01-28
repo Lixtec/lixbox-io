@@ -47,8 +47,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.EncodingConstants;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 
 public class DOMUtils
 {

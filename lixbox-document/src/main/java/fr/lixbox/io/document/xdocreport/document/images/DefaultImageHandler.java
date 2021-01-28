@@ -28,10 +28,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-import fr.lixbox.io.document.xdocreport.document.images.ByteArrayImageProvider;
-import fr.lixbox.io.document.xdocreport.document.images.FileImageProvider;
-import fr.lixbox.io.document.xdocreport.document.images.IImageHandler;
-import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
 
 public class DefaultImageHandler

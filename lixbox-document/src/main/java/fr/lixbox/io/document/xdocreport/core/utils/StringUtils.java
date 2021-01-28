@@ -28,8 +28,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.EncodingConstants;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 /**
  * String Utilities.

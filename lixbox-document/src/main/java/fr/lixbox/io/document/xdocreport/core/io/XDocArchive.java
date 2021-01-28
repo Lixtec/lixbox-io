@@ -43,15 +43,11 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 import fr.lixbox.io.document.xdocreport.core.EncodingConstants;
-import fr.lixbox.io.document.xdocreport.core.io.IEntryInfo;
-import fr.lixbox.io.document.xdocreport.core.io.IEntryInputStreamProvider;
-import fr.lixbox.io.document.xdocreport.core.io.IEntryOutputStreamProvider;
-import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
-import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.io.internal.OutputStream2InputStream;
 import fr.lixbox.io.document.xdocreport.core.io.internal.OutputStreamWriterCancelable;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
+import fr.lixbox.io.document.xdocreport.document.preprocessor.IXDocPreprocessor;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 
 /**
  * {@link XDocArchive} is used to load zipped XML document archive (docx, odt...) {@link XDocArchive} cache each entry

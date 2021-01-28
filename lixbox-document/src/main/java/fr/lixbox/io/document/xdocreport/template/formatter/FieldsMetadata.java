@@ -35,20 +35,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.template.registry.FieldsMetadataClassSerializerRegistry;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.document.SyntaxKind;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldReplacementFormatter;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadataComparator;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadataXMLSerializer;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsNameComparator;
-import fr.lixbox.io.document.xdocreport.template.formatter.ICustomFormatter;
-import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
-import fr.lixbox.io.document.xdocreport.template.formatter.IFieldsMetadataClassSerializer;
-import fr.lixbox.io.document.xdocreport.template.formatter.NullImageBehaviour;
+import fr.lixbox.io.document.xdocreport.template.registry.FieldsMetadataClassSerializerRegistry;
 
 /**
  * Fields Metadata is used in the preprocessing step to modify some XML entries like generate script (Freemarker,

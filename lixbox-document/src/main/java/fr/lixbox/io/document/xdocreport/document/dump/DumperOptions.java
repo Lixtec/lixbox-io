@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.document.dump;
 
 import java.util.HashMap;
 
-import fr.lixbox.io.document.xdocreport.document.dump.DumperKind;
-
 /**
  * Dumper options.
  */

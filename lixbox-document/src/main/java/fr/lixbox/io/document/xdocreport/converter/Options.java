@@ -27,8 +27,6 @@ package fr.lixbox.io.document.xdocreport.converter;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.converter.ConverterTypeTo;
-import fr.lixbox.io.document.xdocreport.converter.ConverterTypeVia;
 import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
 
 public class Options

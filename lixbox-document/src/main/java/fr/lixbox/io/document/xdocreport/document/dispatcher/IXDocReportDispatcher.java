@@ -24,9 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.dispatcher;
 
-import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportController;
-import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportLoader;
-
 public interface IXDocReportDispatcher<T extends IXDocReportController>
     extends IXDocReportLoader
 {

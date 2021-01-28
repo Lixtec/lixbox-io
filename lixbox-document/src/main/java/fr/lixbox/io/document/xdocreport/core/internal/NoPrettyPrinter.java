@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.core.internal;
 
-import fr.lixbox.io.document.xdocreport.core.internal.IXMLPrettyPrinter;
-
 /**
  * XML Pretty Printer which doesn't indent the XML source.
  */

@@ -24,9 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.converter;
 
-import fr.lixbox.io.document.xdocreport.converter.IURIResolver;
-import fr.lixbox.io.document.xdocreport.converter.Options;
-
 /**
  * Helper to populate converter options.
  */

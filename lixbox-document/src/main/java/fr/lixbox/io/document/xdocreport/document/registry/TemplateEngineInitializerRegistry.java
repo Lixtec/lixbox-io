@@ -29,14 +29,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.discovery.ITemplateEngineDiscovery;
-import fr.lixbox.io.document.xdocreport.template.registry.TemplateEngineRegistry;
 import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.document.discovery.ITemplateEngineInitializerDiscovery;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
+import fr.lixbox.io.document.xdocreport.template.discovery.ITemplateEngineDiscovery;
+import fr.lixbox.io.document.xdocreport.template.registry.TemplateEngineRegistry;
 
 public class TemplateEngineInitializerRegistry
     extends AbstractRegistry<ITemplateEngineInitializerDiscovery>

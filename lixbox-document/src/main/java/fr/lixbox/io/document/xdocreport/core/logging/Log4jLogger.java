@@ -39,9 +39,6 @@ import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.Priority;
 import org.apache.log4j.spi.LoggingEvent;
 
-import fr.lixbox.io.document.xdocreport.core.logging.AbstractDelegatingLogger;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
-
 /**
  * java.util.logging.Logger implementation delegating to Log4j.
  * <p>

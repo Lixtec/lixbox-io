@@ -29,7 +29,6 @@ import java.io.OutputStream;
 
 import fr.lixbox.io.document.xdocreport.core.document.ImageFormat;
 import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
-import fr.lixbox.io.document.xdocreport.document.json.JSONObject;
 import fr.lixbox.io.document.xdocreport.template.formatter.NullImageBehaviour;
 
 public class JSONImage

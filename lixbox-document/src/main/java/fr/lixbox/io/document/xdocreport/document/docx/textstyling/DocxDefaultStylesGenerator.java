@@ -30,7 +30,6 @@ import java.util.List;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.DefaultStyle;
-import fr.lixbox.io.document.xdocreport.document.docx.textstyling.IDocxStylesGenerator;
 import fr.lixbox.io.document.xdocreport.document.textstyling.AbstractStylesGenerator;
 import fr.lixbox.io.document.xdocreport.document.textstyling.Style;
 

@@ -29,11 +29,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
-import fr.lixbox.io.document.xdocreport.document.discovery.IDumperDiscovery;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
-import fr.lixbox.io.document.xdocreport.document.dump.IDumper;
+import fr.lixbox.io.document.xdocreport.document.discovery.IDumperDiscovery;
 
 /**
  * {@link IDumper} registry.

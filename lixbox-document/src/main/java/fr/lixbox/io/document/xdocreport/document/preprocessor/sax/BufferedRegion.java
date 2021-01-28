@@ -29,12 +29,6 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedRegionAdpater;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ISavable;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.StringBufferedRegion;
-
 /**
  * Buffered region.
  */

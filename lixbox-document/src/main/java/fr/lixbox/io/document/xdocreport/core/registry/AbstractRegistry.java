@@ -28,9 +28,9 @@ import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.discovery.IBaseDiscovery;
 import fr.lixbox.io.document.xdocreport.core.internal.JDKServiceLoader;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 public abstract class AbstractRegistry<Discovery extends IBaseDiscovery>
 {

@@ -24,9 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.core.cache;
 
-import fr.lixbox.io.document.xdocreport.core.cache.ICacheStorage;
-import fr.lixbox.io.document.xdocreport.core.cache.ICacheStorageFactoryDiscovery;
-import fr.lixbox.io.document.xdocreport.core.cache.MapCacheStorage;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 
 /**

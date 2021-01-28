@@ -34,13 +34,11 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.AbstractXDocPreprocessor;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocument;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

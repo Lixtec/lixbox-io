@@ -24,9 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.preprocessor.sax;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedTagElement;
-
 /**
  * Buffer for end tag element.
  */

@@ -32,11 +32,6 @@ import java.util.logging.Logger;
 
 import fr.lixbox.io.document.xdocreport.converter.discovery.IConverterDiscovery;
 import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
-import fr.lixbox.io.document.xdocreport.converter.ConverterFrom;
-import fr.lixbox.io.document.xdocreport.converter.ConverterTo;
-import fr.lixbox.io.document.xdocreport.converter.IConverter;
-import fr.lixbox.io.document.xdocreport.converter.Options;
-import fr.lixbox.io.document.xdocreport.converter.XDocConverterException;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 
 /**

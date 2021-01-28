@@ -27,9 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.preprocessor.sax;
 import java.io.IOException;
 import java.io.Writer;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedRegion;
-
 /**
  * Base class for start/end tag element. This buffer stores content of the start/end tag element and is enable to add
  * some content (ex: template engine script) on before/after the content of the start/end tag element.

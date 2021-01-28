@@ -24,22 +24,21 @@
  */
 package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes;
 
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isFldSimple;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isP;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.ID_ATTR;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.TYPE_ATTR;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.W_NS;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isFldSimple;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isP;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
+import fr.lixbox.io.document.xdocreport.core.utils.XMLUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocxBufferedDocument;
-import fr.lixbox.io.document.xdocreport.core.utils.XMLUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.FldSimpleBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.PBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.AbstractNoteBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 
 public abstract class AbstractNotesBufferedDocument

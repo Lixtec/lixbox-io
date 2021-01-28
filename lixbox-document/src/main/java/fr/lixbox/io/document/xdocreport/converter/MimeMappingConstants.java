@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.converter;
 
-import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
-
 /**
  * Mime mapping constants used for converter and process template generation.
  */

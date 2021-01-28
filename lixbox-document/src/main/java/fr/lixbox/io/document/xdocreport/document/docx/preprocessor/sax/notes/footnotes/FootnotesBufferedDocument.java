@@ -30,7 +30,6 @@ import fr.lixbox.io.document.xdocreport.document.docx.DocxUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.AbstractNoteBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.AbstractNotesBufferedDocument;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.footnotes.FootnoteBufferedRegion;
 
 public class FootnotesBufferedDocument
     extends AbstractNotesBufferedDocument

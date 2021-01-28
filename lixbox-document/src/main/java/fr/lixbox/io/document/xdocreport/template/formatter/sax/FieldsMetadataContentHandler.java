@@ -28,9 +28,9 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.XMLFieldsConstants;
 
 public class FieldsMetadataContentHandler

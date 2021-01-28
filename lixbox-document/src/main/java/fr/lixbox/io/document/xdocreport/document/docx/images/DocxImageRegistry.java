@@ -26,12 +26,12 @@ package fr.lixbox.io.document.xdocreport.document.docx.images;
 
 import java.text.DecimalFormat;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryOutputStreamProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
 import fr.lixbox.io.document.xdocreport.document.images.AbstractImageRegistry;
 import fr.lixbox.io.document.xdocreport.document.images.ImageProviderInfo;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * Docx image registry.

@@ -387,7 +387,12 @@ subprojects {
         effort = 'max'
         excludeFilter = file('../gradle/config/findbugsExcludeFilter.xml')
     }
-    
+    spotbugsMain {
+	    reports {
+	        xml.enabled = false
+	        html.enabled = true
+	    }
+	}
     jar{
         manifest {
             attributes("Implementation-Title": "${config.desc_project.artefact.group}.${rootProject.name}:${project.name}",

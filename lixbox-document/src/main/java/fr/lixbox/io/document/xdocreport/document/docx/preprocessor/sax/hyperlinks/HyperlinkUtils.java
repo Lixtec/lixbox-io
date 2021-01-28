@@ -27,8 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlin
 import java.util.Map;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkRegistry;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.InitialHyperlinkMap;
 
 /**
  * Utilities for Hyperlink.

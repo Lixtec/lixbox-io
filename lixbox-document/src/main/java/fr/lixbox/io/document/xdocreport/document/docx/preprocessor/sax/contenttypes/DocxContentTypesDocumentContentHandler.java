@@ -31,11 +31,11 @@ import java.util.Map;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.core.document.ImageFormat;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.NumberingRegistry;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

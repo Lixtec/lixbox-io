@@ -46,15 +46,14 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.document.AbstractXDocReport;
-import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryOutputStreamProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
+import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
+import fr.lixbox.io.document.xdocreport.document.AbstractXDocReport;
 import fr.lixbox.io.document.xdocreport.document.docx.images.DocxImageRegistry;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.DefaultStyle;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocxPreprocessor;
@@ -71,6 +70,7 @@ import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.foo
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.DocxNumberingPreprocessor;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.rels.DocxDocumentXMLRelsPreprocessor;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.styles.DocxStylesPreprocessor;
+import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
 import fr.lixbox.io.document.xdocreport.document.images.IImageRegistry;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 

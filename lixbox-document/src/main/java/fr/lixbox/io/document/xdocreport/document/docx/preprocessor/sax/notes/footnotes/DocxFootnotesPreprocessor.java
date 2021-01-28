@@ -26,11 +26,10 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.fo
 
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.SAXXDocPreprocessor;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.footnotes.DocxFootnotesDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.IXDocPreprocessor;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
+import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.SAXXDocPreprocessor;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

@@ -32,9 +32,9 @@ import org.apache.velocity.runtime.RuntimeServices;
 import org.apache.velocity.runtime.resource.Resource;
 import org.apache.velocity.runtime.resource.loader.ResourceLoader;
 
+import fr.lixbox.io.document.xdocreport.core.io.IEntryInfo;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.core.io.IEntryInfo;
 import fr.lixbox.io.document.xdocreport.template.cache.ITemplateCacheInfoProvider;
 import fr.lixbox.io.document.xdocreport.template.utils.TemplateUtils;
 import fr.lixbox.io.document.xdocreport.template.velocity.VelocityConstants;

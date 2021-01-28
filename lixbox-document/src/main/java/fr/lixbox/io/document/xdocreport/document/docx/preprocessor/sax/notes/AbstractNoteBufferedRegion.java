@@ -28,11 +28,8 @@ import java.util.Map;
 
 import org.xml.sax.Attributes;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.InitialNoteInfoMap;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.NoteInfo;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.NoteRegistry;
+import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedAttribute;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;

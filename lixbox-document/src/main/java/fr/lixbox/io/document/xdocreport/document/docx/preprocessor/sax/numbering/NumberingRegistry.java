@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.NumberInfo;
 
 public class NumberingRegistry
 {

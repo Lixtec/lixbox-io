@@ -36,11 +36,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.sax.FieldsMetadataContentHandler;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.template.formatter.XMLFieldsConstants;
+import fr.lixbox.io.document.xdocreport.template.formatter.sax.FieldsMetadataContentHandler;
 
 /**
  * Fields metadata serializer used to load {@link FieldsMetadata} from XML and serialize {@link FieldsMetadata} to XML.

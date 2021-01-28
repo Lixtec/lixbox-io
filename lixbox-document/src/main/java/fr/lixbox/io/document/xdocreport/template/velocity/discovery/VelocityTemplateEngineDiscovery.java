@@ -31,10 +31,10 @@ import java.util.Properties;
 import org.apache.velocity.runtime.RuntimeConstants;
 
 import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.discovery.ITemplateEngineDiscovery;
-import fr.lixbox.io.document.xdocreport.template.velocity.cache.XDocReportEntryResourceLoader;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
+import fr.lixbox.io.document.xdocreport.template.discovery.ITemplateEngineDiscovery;
 import fr.lixbox.io.document.xdocreport.template.velocity.VelocityConstants;
+import fr.lixbox.io.document.xdocreport.template.velocity.cache.XDocReportEntryResourceLoader;
 import fr.lixbox.io.document.xdocreport.template.velocity.internal.VelocityTemplateEngine;
 
 /**

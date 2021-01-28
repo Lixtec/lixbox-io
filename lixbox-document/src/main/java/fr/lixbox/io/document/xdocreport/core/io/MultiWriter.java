@@ -27,8 +27,6 @@ package fr.lixbox.io.document.xdocreport.core.io;
 import java.io.IOException;
 import java.io.Writer;
 
-import fr.lixbox.io.document.xdocreport.core.io.StreamCancelable;
-
 /**
  * Multiple writer used to write for several writer.
  */

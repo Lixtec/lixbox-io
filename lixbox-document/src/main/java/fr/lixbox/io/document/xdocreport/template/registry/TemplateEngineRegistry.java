@@ -30,10 +30,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.discovery.ITemplateEngineDiscovery;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
+import fr.lixbox.io.document.xdocreport.template.discovery.ITemplateEngineDiscovery;
 
 /**
  * Template engine registry stores instance of {@link ITemplateEngine} for template engine kind (Freemarker, Velocity)

@@ -55,7 +55,6 @@ import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.WP_NS
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.W_NS;
 
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.document.docx.DocxConstants;
 
 /**
  * Utilities for docx.

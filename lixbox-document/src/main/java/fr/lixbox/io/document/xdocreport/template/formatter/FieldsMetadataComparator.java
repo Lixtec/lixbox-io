@@ -26,9 +26,6 @@ package fr.lixbox.io.document.xdocreport.template.formatter;
 
 import java.util.Comparator;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsNameComparator;
-
 public class FieldsMetadataComparator
     implements Comparator<FieldMetadata>
 {

@@ -56,11 +56,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.json.IJSONNode;
-import fr.lixbox.io.document.xdocreport.document.json.JSONException;
-import fr.lixbox.io.document.xdocreport.document.json.JSONObject;
-import fr.lixbox.io.document.xdocreport.document.json.JSONTokener;
-
 /**
  * A JSONArray is an ordered sequence of values. Its external text form is a string wrapped in square brackets with
  * commas separating the values. The internal form is an object having <code>get</code> and <code>opt</code> methods for

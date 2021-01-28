@@ -27,7 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes;
 import java.util.Map;
 
 import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.InitialNoteInfoMap;
 
 public class NoteUtils
 {

@@ -25,8 +25,6 @@
 package fr.lixbox.io.document.xdocreport.template.formatter;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.template.formatter.NullImageBehaviour;
 
 /**
  * Field metadata.

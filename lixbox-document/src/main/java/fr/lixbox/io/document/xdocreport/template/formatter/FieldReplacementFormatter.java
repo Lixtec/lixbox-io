@@ -28,8 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.template.formatter.ICustomFormatter;
-import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**
  * Custom replacement of merge/input field which is done while preprocessing step.

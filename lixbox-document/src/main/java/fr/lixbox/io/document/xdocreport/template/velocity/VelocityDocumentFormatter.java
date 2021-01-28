@@ -28,10 +28,10 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.DirectivesStack;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.template.TemplateContextHelper;
 import fr.lixbox.io.document.xdocreport.template.formatter.AbstractDocumentFormatter;
+import fr.lixbox.io.document.xdocreport.template.formatter.DirectivesStack;
 import fr.lixbox.io.document.xdocreport.template.formatter.IfDirective;
 import fr.lixbox.io.document.xdocreport.template.formatter.LoopDirective;
 

@@ -51,13 +51,12 @@ public abstract class MergefieldBufferedRegion
 
     private static final String HYPERLINK_FIELD_TYPE = "HYPERLINK";
 
-    private final TransformedBufferedDocumentContentHandler handler;
+    private final TransformedBufferedDocumentContentHandler<?> handler;
 
     private String fieldName;
 
-    private BufferedElement tRegion;
 
-    public MergefieldBufferedRegion( TransformedBufferedDocumentContentHandler handler, BufferedElement parent,
+    public MergefieldBufferedRegion( TransformedBufferedDocumentContentHandler<?> handler, BufferedElement parent,
                                      String uri, String localName, String name, Attributes attributes )
     {
         super( parent, uri, localName, name, attributes );
@@ -124,7 +123,7 @@ public abstract class MergefieldBufferedRegion
 
     private static String getFieldName( MergefieldBufferedRegion mergefield, String instrText,
                                         FieldMetadata fieldAsTextStyling, IDocumentFormatter formatter,
-                                        TransformedBufferedDocumentContentHandler handler )
+                                        TransformedBufferedDocumentContentHandler<?> handler )
     {
         if ( StringUtils.isEmpty( instrText ) )
         {

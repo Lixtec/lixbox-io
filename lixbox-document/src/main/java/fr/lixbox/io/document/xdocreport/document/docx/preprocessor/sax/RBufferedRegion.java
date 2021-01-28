@@ -26,7 +26,6 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax;
 
 import org.xml.sax.Attributes;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.MergefieldBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.TransformedBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;

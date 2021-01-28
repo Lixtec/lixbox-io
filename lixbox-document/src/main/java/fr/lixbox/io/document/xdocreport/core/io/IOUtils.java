@@ -44,9 +44,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.io.internal.ByteArrayOutputStream;
 import fr.lixbox.io.document.xdocreport.core.io.internal.LineIterator;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 //import org.apache.commons.io.output.ByteArrayOutputStream;
 

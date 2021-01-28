@@ -25,8 +25,6 @@
 package fr.lixbox.io.document.xdocreport.document.textstyling;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
-import fr.lixbox.io.document.xdocreport.document.textstyling.ITransformResult;
 
 /**
  * Text styling transformer is used to transform some syntax (HTML, Mediawiki, etc) to another syntax (docx, odt, etc).

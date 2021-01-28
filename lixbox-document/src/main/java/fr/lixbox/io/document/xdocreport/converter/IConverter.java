@@ -27,9 +27,6 @@ package fr.lixbox.io.document.xdocreport.converter;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
-import fr.lixbox.io.document.xdocreport.converter.Options;
-import fr.lixbox.io.document.xdocreport.converter.XDocConverterException;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryInputStreamProvider;
 
 /**

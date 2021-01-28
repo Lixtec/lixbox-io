@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.document.images;
 
 import java.io.IOException;
 
-import fr.lixbox.io.document.xdocreport.document.images.IImageInfo;
-import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
 import fr.lixbox.io.document.xdocreport.template.formatter.NullImageBehaviour;
 
 /**

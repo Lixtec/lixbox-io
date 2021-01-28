@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.preprocessor.sax;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ISavable;
-
 /**
  * Interface for buffered region.
  */

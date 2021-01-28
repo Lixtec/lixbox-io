@@ -40,7 +40,6 @@ import java.util.Map;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.document.docx.images.DocxImageRegistry;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkInfo;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkRegistry;
@@ -49,6 +48,7 @@ import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
 import fr.lixbox.io.document.xdocreport.template.TemplateContextHelper;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

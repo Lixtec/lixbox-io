@@ -29,10 +29,10 @@ import java.util.Map;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
-import fr.lixbox.io.document.xdocreport.document.docx.textstyling.IDocxStylesGenerator;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.DefaultStyle;
+import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
+import fr.lixbox.io.document.xdocreport.document.docx.textstyling.IDocxStylesGenerator;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;

@@ -27,9 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.preprocessor.sax;
 import java.io.IOException;
 import java.io.Writer;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedRegionAdpater;
-
 /**
  * Attribute buffered region used to manage XML dynamic attribute.
  */

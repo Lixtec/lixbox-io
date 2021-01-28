@@ -24,10 +24,9 @@
  */
 package fr.lixbox.io.document.xdocreport.document.docx.discovery;
 
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
 import fr.lixbox.io.document.xdocreport.document.discovery.ITemplateEngineInitializerDiscovery;
-import fr.lixbox.io.document.xdocreport.document.docx.discovery.DocxTemplateEngineConfiguration;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 
 public class DocxTemplateEngineInitializerConfigurationDiscovery
     implements ITemplateEngineInitializerDiscovery

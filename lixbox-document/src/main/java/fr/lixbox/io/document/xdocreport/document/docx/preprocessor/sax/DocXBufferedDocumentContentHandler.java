@@ -24,6 +24,12 @@
  */
 package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax;
 
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.CX_ATTR;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.CY_ATTR;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.EMBED_ATTR;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.FLDCHARTYPE_ATTR;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.R_NS;
+import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.W_NS;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isBlip;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isExt;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isExtent;
@@ -32,12 +38,6 @@ import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isFldSimp
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isInstrText;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isR;
 import static fr.lixbox.io.document.xdocreport.document.docx.DocxUtils.isT;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.CX_ATTR;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.CY_ATTR;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.EMBED_ATTR;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.FLDCHARTYPE_ATTR;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.R_NS;
-import static fr.lixbox.io.document.xdocreport.document.docx.DocxConstants.W_NS;
 
 import java.util.Map;
 
@@ -45,17 +45,12 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.BookmarkBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocxBufferedDocument;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.FldSimpleBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.MergefieldBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.RBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.images.AbstractImageRegistry;
 import fr.lixbox.io.document.xdocreport.document.images.IImageRegistry;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.TransformedBufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.template.TemplateContextHelper;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

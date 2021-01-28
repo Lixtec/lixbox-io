@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.discovery;
 
-import fr.lixbox.io.document.xdocreport.document.discovery.IXDocReportFactoryDiscovery;
-
 public abstract class AbstractXDocReportFactoryDiscovery
     implements IXDocReportFactoryDiscovery
 {

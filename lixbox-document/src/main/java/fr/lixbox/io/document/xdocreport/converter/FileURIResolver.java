@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.converter;
 
 import java.io.File;
 
-import fr.lixbox.io.document.xdocreport.converter.BasicURIResolver;
-
 /**
  * File URI resolver.
  */

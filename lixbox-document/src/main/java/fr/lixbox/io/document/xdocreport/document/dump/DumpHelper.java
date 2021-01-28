@@ -36,17 +36,16 @@ import java.io.Writer;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
-import fr.lixbox.io.document.xdocreport.document.json.JSONObject;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.utils.Base64Utility;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.dump.DumperOptions;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
+import fr.lixbox.io.document.xdocreport.document.json.JSONObject;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * Dump helper.

@@ -28,9 +28,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.converter.ConverterTo;
-import fr.lixbox.io.document.xdocreport.converter.IConverter;
-
 /**
  * Converter from.
  */

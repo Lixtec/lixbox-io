@@ -29,19 +29,15 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
-import fr.lixbox.io.document.xdocreport.document.DocumentContextHelper;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryOutputStreamProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
-import fr.lixbox.io.document.xdocreport.document.images.IImageHandler;
-import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
-import fr.lixbox.io.document.xdocreport.document.images.IImageRegistry;
-import fr.lixbox.io.document.xdocreport.document.images.ImageProviderInfo;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
+import fr.lixbox.io.document.xdocreport.document.DocumentContextHelper;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldMetadata;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.NullImageBehaviour;
 
 /**

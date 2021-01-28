@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.template.formatter;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
-
 /**
  * Custom formatter field which is used to format input/mergefield while preprocessing step.
  * 

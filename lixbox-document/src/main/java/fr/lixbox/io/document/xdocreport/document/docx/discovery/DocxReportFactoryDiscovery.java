@@ -24,14 +24,14 @@
  */
 package fr.lixbox.io.document.xdocreport.document.docx.discovery;
 
+import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.document.IXDocReport;
+import fr.lixbox.io.document.xdocreport.document.discovery.AbstractXDocReportFactoryDiscovery;
+import fr.lixbox.io.document.xdocreport.document.docx.DocxConstants;
 import fr.lixbox.io.document.xdocreport.document.docx.DocxReport;
 import fr.lixbox.io.document.xdocreport.document.docx.DocxUtils;
 import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
-import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
-import fr.lixbox.io.document.xdocreport.document.discovery.AbstractXDocReportFactoryDiscovery;
-import fr.lixbox.io.document.xdocreport.document.docx.DocxConstants;
 
 /**
  * MS Word DOCX discovery used by the {@link XDocReportRegistry#loadReport(java.io.InputStream)} to create an instance

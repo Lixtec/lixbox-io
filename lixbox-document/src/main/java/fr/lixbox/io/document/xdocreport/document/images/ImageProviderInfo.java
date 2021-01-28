@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.images;
 
-import fr.lixbox.io.document.xdocreport.document.images.IImageProvider;
-
 /**
  * Information about image provider.
  */

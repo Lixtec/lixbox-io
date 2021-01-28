@@ -32,8 +32,6 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.AbstractDelegatingLogger;
-
 /**
  * A container for static utility methods related to logging.
  * <p>

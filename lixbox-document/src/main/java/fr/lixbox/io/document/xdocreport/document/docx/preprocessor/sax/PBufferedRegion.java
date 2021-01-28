@@ -30,8 +30,6 @@ import java.util.List;
 
 import org.xml.sax.Attributes;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocxBufferedDocument;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.RBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ISavable;
 
@@ -92,14 +90,11 @@ public class PBufferedRegion
 
     private final DocxBufferedDocument document;
 
-    private boolean containsField;
-
     public PBufferedRegion( DocxBufferedDocument document, BufferedElement parent, String uri, String localName,
                             String name, Attributes attributes )
     {
         super( parent, uri, localName, name, attributes );
         this.document = document;
-        this.containsField = false;
     }
 
     @Override
@@ -217,7 +212,6 @@ public class PBufferedRegion
                     // the t content with fieldName
                     rBufferedRegion.setTContent(0, fieldName );
                     fieldNameSetted = true;
-                    containsField = true;
                 }
                 else
                 {

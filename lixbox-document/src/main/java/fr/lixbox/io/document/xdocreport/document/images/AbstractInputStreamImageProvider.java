@@ -32,9 +32,6 @@ import java.util.logging.Logger;
 
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
-import fr.lixbox.io.document.xdocreport.document.images.AbstractImageProvider;
-import fr.lixbox.io.document.xdocreport.document.images.IImageInfo;
-import fr.lixbox.io.document.xdocreport.document.images.SimpleImageInfo;
 
 public abstract class AbstractInputStreamImageProvider
     extends AbstractImageProvider

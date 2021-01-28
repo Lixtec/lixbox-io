@@ -28,15 +28,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.document.docx.textstyling.DocxDocumentHandler;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.SAXXDocPreprocessor;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.DocxNumberingDocumentContentHandler;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.NumberingRegistry;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.IXDocPreprocessor;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
+import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.SAXXDocPreprocessor;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

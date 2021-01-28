@@ -26,7 +26,6 @@ package fr.lixbox.io.document.xdocreport.template.formatter;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.discovery.IBaseDiscovery;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * Fields metadata serializer used to load {@link FieldsMetadata} from Java {@link Class} model.

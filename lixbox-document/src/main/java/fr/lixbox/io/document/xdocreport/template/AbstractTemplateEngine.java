@@ -36,15 +36,12 @@ import java.io.Writer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.io.MultiWriter;
-import fr.lixbox.io.document.xdocreport.template.FieldsExtractor;
-import fr.lixbox.io.document.xdocreport.template.IContext;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.template.cache.ITemplateCacheInfoProvider;
 import fr.lixbox.io.document.xdocreport.template.config.ITemplateEngineConfiguration;
 

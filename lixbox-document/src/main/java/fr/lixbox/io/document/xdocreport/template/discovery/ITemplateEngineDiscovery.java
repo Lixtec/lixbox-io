@@ -24,8 +24,10 @@
  */
 package fr.lixbox.io.document.xdocreport.template.discovery;
 
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.core.discovery.IBaseDiscovery;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
+import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 
 /**
  * Discovery used to create template engine instance.

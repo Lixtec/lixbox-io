@@ -34,14 +34,13 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
+import fr.lixbox.io.document.xdocreport.core.io.MultiWriter;
+import fr.lixbox.io.document.xdocreport.core.io.StreamCancelable;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.core.io.MultiWriter;
-import fr.lixbox.io.document.xdocreport.core.io.StreamCancelable;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.IXDocPreprocessor;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

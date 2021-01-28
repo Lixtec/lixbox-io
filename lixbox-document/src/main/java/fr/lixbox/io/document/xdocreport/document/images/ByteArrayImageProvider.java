@@ -29,11 +29,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.document.ImageFormat;
-import fr.lixbox.io.document.xdocreport.document.images.AbstractImageProvider;
-import fr.lixbox.io.document.xdocreport.document.images.IImageInfo;
-import fr.lixbox.io.document.xdocreport.document.images.SimpleImageInfo;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 
 /**
  * Image provider implementation with byte array for image content. This provider is useful when image content can

@@ -26,13 +26,13 @@ package fr.lixbox.io.document.xdocreport.document.docx.template;
 
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.docx.textstyling.DocxDefaultStylesGenerator;
-import fr.lixbox.io.document.xdocreport.document.docx.textstyling.IDocxStylesGenerator;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.DefaultStyle;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkRegistry;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.NoteRegistry;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.NumberingRegistry;
+import fr.lixbox.io.document.xdocreport.document.docx.textstyling.DocxDefaultStylesGenerator;
+import fr.lixbox.io.document.xdocreport.document.docx.textstyling.IDocxStylesGenerator;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 
 public class DocxContextHelper

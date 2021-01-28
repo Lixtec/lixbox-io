@@ -27,9 +27,9 @@ package fr.lixbox.io.document.xdocreport.document.registry;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.discovery.ITextStylingTransformerDiscovery;
 import fr.lixbox.io.document.xdocreport.core.document.SyntaxKind;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
+import fr.lixbox.io.document.xdocreport.document.discovery.ITextStylingTransformerDiscovery;
 import fr.lixbox.io.document.xdocreport.document.textstyling.ITextStylingTransformer;
 
 /**

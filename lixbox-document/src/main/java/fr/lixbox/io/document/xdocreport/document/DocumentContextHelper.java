@@ -26,10 +26,10 @@ package fr.lixbox.io.document.xdocreport.document;
 
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.registry.TextStylingRegistry;
 import fr.lixbox.io.document.xdocreport.document.images.IImageHandler;
 import fr.lixbox.io.document.xdocreport.document.images.IImageRegistry;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
+import fr.lixbox.io.document.xdocreport.document.registry.TextStylingRegistry;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 import fr.lixbox.io.document.xdocreport.template.TemplateContextHelper;
 

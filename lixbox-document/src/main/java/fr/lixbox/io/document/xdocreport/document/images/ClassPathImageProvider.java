@@ -28,7 +28,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import fr.lixbox.io.document.xdocreport.core.document.ImageFormat;
-import fr.lixbox.io.document.xdocreport.document.images.AbstractInputStreamImageProvider;
 
 /**
  * Image provider implementation with image input stream coming from ClassPath.

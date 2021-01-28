@@ -28,9 +28,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.DirectivesStack;
-import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
-
 public abstract class AbstractDocumentFormatter
     implements IDocumentFormatter
 {

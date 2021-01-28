@@ -29,10 +29,10 @@ import java.util.Map;
 import org.xml.sax.Attributes;
 
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.DocXBufferedDocumentContentHandler;
-import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.AbstractNoteReferenceBufferedRegion;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.InitialNoteInfoMap;
 import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.NoteUtils;
+import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 
 public class FootnoteReferenceBufferedRegion

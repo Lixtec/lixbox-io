@@ -27,7 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.dump.eclipse;
 import fr.lixbox.io.document.xdocreport.document.discovery.IDumperDiscovery;
 import fr.lixbox.io.document.xdocreport.document.dump.DumperKind;
 import fr.lixbox.io.document.xdocreport.document.dump.IDumper;
-import fr.lixbox.io.document.xdocreport.document.dump.eclipse.EclipseProjectDumper;
 
 /**
  * Eclipse project dumper {@link EclipseProjectDumper} discovery.

@@ -27,9 +27,9 @@ package fr.lixbox.io.document.xdocreport.document.preprocessor;
 import java.io.IOException;
 import java.util.Map;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
 /**

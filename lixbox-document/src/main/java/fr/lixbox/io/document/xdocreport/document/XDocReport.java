@@ -29,13 +29,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.converter.Options;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportController;
 import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportLoader;
+import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * Helper class to generate report and convert it if needed.

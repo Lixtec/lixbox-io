@@ -52,8 +52,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.core.cache.ICacheStorage;
-
 /**
  * {@link ICacheStorage} implementation with {@link Map};
  * 

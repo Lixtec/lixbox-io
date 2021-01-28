@@ -28,20 +28,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import fr.lixbox.io.document.xdocreport.document.registry.TemplateEngineInitializerRegistry;
-import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
-import fr.lixbox.io.document.xdocreport.template.registry.TemplateEngineRegistry;
 import fr.lixbox.io.document.xdocreport.converter.IConverter;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.converter.Options;
 import fr.lixbox.io.document.xdocreport.converter.XDocConverterException;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
-import fr.lixbox.io.document.xdocreport.document.ProcessState;
+import fr.lixbox.io.document.xdocreport.document.registry.TemplateEngineInitializerRegistry;
+import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
+import fr.lixbox.io.document.xdocreport.template.registry.TemplateEngineRegistry;
 
 public abstract class Generator<In, Out>
 {

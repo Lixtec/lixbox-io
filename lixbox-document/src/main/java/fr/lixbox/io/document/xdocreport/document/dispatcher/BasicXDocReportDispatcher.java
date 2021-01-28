@@ -28,9 +28,6 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.document.dispatcher.AbstractXDocReportDispatcher;
-import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportController;
-
 public class BasicXDocReportDispatcher<T extends IXDocReportController>
     extends AbstractXDocReportDispatcher<T>
 {

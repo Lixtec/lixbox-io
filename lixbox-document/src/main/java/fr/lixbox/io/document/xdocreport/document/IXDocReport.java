@@ -30,21 +30,20 @@ import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.Map;
 
-import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.converter.IConverter;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.converter.Options;
 import fr.lixbox.io.document.xdocreport.converter.XDocConverterException;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.ProcessState;
+import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.document.dump.DumperOptions;
 import fr.lixbox.io.document.xdocreport.document.dump.IDumper;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.IXDocPreprocessor;
+import fr.lixbox.io.document.xdocreport.document.registry.XDocReportRegistry;
 import fr.lixbox.io.document.xdocreport.template.FieldsExtractor;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 /**
  * XML Document reporting used to load XML document (odt, docx...) and generate reporting by merging it with Java data

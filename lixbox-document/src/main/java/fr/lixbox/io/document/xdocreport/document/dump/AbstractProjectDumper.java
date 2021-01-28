@@ -30,18 +30,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.zip.ZipOutputStream;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.converter.MimeMappingConstants;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.dump.AbstractDumper;
-import fr.lixbox.io.document.xdocreport.document.dump.DumpHelper;
-import fr.lixbox.io.document.xdocreport.document.dump.DumperKind;
-import fr.lixbox.io.document.xdocreport.document.dump.DumperOptions;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 import fr.lixbox.io.document.xdocreport.document.dump.eclipse.EclipseProjectDumper.EclipseProjectDumperOptions;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 
 public abstract class AbstractProjectDumper
     extends AbstractDumper

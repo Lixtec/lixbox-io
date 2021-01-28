@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.textstyling;
 
-import fr.lixbox.io.document.xdocreport.document.textstyling.ITransformResult;
-
 public class BasicTransformResult
     implements ITransformResult
 {

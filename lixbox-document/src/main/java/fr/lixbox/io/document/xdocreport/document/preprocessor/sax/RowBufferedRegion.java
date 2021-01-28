@@ -27,7 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.preprocessor.sax;
 import org.xml.sax.Attributes;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
 import fr.lixbox.io.document.xdocreport.template.formatter.Directive;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 

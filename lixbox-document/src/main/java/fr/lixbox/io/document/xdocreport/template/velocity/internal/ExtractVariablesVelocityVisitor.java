@@ -32,7 +32,6 @@ import org.apache.velocity.runtime.parser.node.ASTprocess;
 import org.apache.velocity.runtime.visitor.BaseVisitor;
 
 import fr.lixbox.io.document.xdocreport.template.FieldsExtractor;
-import fr.lixbox.io.document.xdocreport.template.velocity.internal.Foreach;
 
 public class ExtractVariablesVelocityVisitor
     extends BaseVisitor

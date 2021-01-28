@@ -41,10 +41,6 @@ import org.xml.sax.helpers.AttributesImpl;
 import org.xml.sax.helpers.DefaultHandler;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocument;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.PrefixMapping;
 
 /**
  * SAX Content Handler which build a {@link BufferedDocument} from the XML source stream.

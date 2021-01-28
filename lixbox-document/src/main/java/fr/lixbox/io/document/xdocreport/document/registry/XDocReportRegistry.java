@@ -36,19 +36,18 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
-import fr.lixbox.io.document.xdocreport.document.discovery.IXDocReportFactoryDiscovery;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.cache.CacheStorageRegistry;
 import fr.lixbox.io.document.xdocreport.core.cache.ICacheStorage;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryInfo;
+import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
+import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.registry.TemplateEngineInitializerRegistry;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
+import fr.lixbox.io.document.xdocreport.document.discovery.IXDocReportFactoryDiscovery;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
 import fr.lixbox.io.document.xdocreport.template.cache.ITemplateCacheInfoProvider;
 

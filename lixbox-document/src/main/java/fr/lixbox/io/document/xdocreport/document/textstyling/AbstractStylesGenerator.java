@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.textstyling;
 
-import fr.lixbox.io.document.xdocreport.document.textstyling.IStylesGenerator;
-
 public abstract class AbstractStylesGenerator<DefaultStyle> implements IStylesGenerator<DefaultStyle>
 {
 

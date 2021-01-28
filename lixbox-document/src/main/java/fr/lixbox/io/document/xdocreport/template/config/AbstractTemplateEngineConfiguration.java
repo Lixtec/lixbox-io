@@ -27,9 +27,6 @@ package fr.lixbox.io.document.xdocreport.template.config;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import fr.lixbox.io.document.xdocreport.template.config.ITemplateEngineConfiguration;
-import fr.lixbox.io.document.xdocreport.template.config.ReplaceText;
-
 public abstract class AbstractTemplateEngineConfiguration
     implements ITemplateEngineConfiguration
 {

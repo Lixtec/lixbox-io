@@ -35,9 +35,6 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkInfo;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.InitialHyperlinkMap;
-
 /**
  * SAX Handler which loads Relationship type of Hyperlink declared in the "word/_rels/document.xml.rels" in the initial
  * {@link InitialHyperlinkMap}.

@@ -35,14 +35,6 @@ import java.util.Map;
 
 import org.xml.sax.Attributes;
 
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedAttribute;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedEndTagElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedStartTagElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedTagElement;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
-import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.ISavable;
-
 /**
  * Buffered element which stores start Tag element (ex: <a>) and end Tag element
  * (ex: </a>). The start Tag element stores too the {@link BufferedElement}

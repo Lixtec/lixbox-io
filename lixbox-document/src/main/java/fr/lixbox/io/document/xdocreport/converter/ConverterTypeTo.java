@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.converter;
 
-import fr.lixbox.io.document.xdocreport.converter.MimeMappingConstants;
-
 /**
  * XDocReport available converter type to another format.
  */

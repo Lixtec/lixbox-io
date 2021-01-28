@@ -29,17 +29,16 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 import fr.lixbox.io.document.xdocreport.document.DocumentContextHelper;
 import fr.lixbox.io.document.xdocreport.document.discovery.ITextStylingDocumentHandlerFactoryDiscovery;
-import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.registry.TextStylingTransformerRegistry;
 import fr.lixbox.io.document.xdocreport.document.textstyling.BasicTransformResult;
+import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
 import fr.lixbox.io.document.xdocreport.document.textstyling.ITextStylingTransformer;
 import fr.lixbox.io.document.xdocreport.document.textstyling.ITransformResult;
 import fr.lixbox.io.document.xdocreport.template.IContext;
+import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.TemplateContextHelper;
 
 /**

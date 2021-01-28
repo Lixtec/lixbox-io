@@ -24,10 +24,10 @@
  */
 package fr.lixbox.io.document.xdocreport.document.discovery;
 
-import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.core.discovery.IBaseDiscovery;
+import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
+import fr.lixbox.io.document.xdocreport.document.IXDocReport;
 
 /**
  * Discovery used to register report factory in the {@link XDocReportLoader}. When report is loaded with

@@ -29,18 +29,18 @@ import java.util.Map;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
+import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.document.docx.DocxUtils;
+import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.DefaultStyle;
 import fr.lixbox.io.document.xdocreport.document.docx.template.DocxContextHelper;
 import fr.lixbox.io.document.xdocreport.document.docx.textstyling.IDocxStylesGenerator;
-import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.DefaultStyle;
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.numbering.NumberingRegistry;
+import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocument;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedDocumentContentHandler;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.IBufferedRegion;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
-public class DocxNumberingDocumentContentHandler
-    extends BufferedDocumentContentHandler
+public class DocxNumberingDocumentContentHandler<Document extends BufferedDocument>
+    extends BufferedDocumentContentHandler<Document>
 {
 
     private static final String DECIMAL = "decimal";
@@ -60,8 +60,6 @@ public class DocxNumberingDocumentContentHandler
     private final Map<String, Object> sharedContext;
 
     private String currentAbstractNumId;
-
-    private Integer maxNumId;
 
     private boolean hasDynamicAbstractNum;
 

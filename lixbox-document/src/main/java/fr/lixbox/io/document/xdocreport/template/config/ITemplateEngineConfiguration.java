@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.template.config;
 
 import java.util.Collection;
 
-import fr.lixbox.io.document.xdocreport.template.config.ReplaceText;
-
 public interface ITemplateEngineConfiguration
 {
 

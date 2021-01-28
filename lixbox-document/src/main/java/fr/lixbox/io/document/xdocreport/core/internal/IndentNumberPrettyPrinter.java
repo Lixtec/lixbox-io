@@ -33,8 +33,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import fr.lixbox.io.document.xdocreport.core.internal.IXMLPrettyPrinter;
-
 /**
  * XML Pretty Printer implemented with "indent-number". This XML Pretty Printer implementation can crash with this error
  * :

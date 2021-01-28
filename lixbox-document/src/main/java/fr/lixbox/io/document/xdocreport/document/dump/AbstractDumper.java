@@ -28,15 +28,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.document.IXDocReport;
+import fr.lixbox.io.document.xdocreport.template.IContext;
 import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
 import fr.lixbox.io.document.xdocreport.template.registry.TemplateEngineRegistry;
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.document.dump.DumpHelper;
-import fr.lixbox.io.document.xdocreport.document.dump.DumperOptions;
-import fr.lixbox.io.document.xdocreport.document.dump.IDumper;
-import fr.lixbox.io.document.xdocreport.template.IContext;
 
 public abstract class AbstractDumper
     implements IDumper

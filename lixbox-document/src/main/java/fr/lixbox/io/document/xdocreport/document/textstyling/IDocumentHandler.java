@@ -26,7 +26,6 @@ package fr.lixbox.io.document.xdocreport.document.textstyling;
 
 import java.io.IOException;
 
-import fr.lixbox.io.document.xdocreport.document.textstyling.ITransformResult;
 import fr.lixbox.io.document.xdocreport.document.textstyling.properties.HeaderProperties;
 import fr.lixbox.io.document.xdocreport.document.textstyling.properties.ListItemProperties;
 import fr.lixbox.io.document.xdocreport.document.textstyling.properties.ListProperties;

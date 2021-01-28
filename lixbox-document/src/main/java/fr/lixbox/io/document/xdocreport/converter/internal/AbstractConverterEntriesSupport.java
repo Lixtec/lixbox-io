@@ -28,10 +28,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 import fr.lixbox.io.document.xdocreport.converter.IConverter;
 import fr.lixbox.io.document.xdocreport.converter.Options;
 import fr.lixbox.io.document.xdocreport.converter.XDocConverterException;
+import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
 
 /**
  * Abstract class for {@link IConverter} which support entries input stream provider.

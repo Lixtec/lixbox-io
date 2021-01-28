@@ -24,9 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.template;
 
-import fr.lixbox.io.document.xdocreport.template.IContext;
-import fr.lixbox.io.document.xdocreport.template.ITemplateEngine;
-
 /**
  * Helper to register and retrieves default Java model for the {@link IContext}.
  */

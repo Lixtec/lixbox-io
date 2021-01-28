@@ -24,11 +24,11 @@
  */
 package fr.lixbox.io.document.xdocreport.document.docx.discovery;
 
+import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
 import fr.lixbox.io.document.xdocreport.document.discovery.ITextStylingDocumentHandlerFactoryDiscovery;
 import fr.lixbox.io.document.xdocreport.document.docx.textstyling.DocxDocumentHandler;
-import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
-import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
+import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
 import fr.lixbox.io.document.xdocreport.template.IContext;
 
 public class DocxDocumentHandlerFactoryDiscovery

@@ -30,7 +30,6 @@ import java.io.Writer;
 import java.util.Stack;
 
 import fr.lixbox.io.document.xdocreport.document.preprocessor.sax.BufferedElement;
-import fr.lixbox.io.document.xdocreport.document.textstyling.IDocumentHandler;
 import fr.lixbox.io.document.xdocreport.document.textstyling.properties.ListProperties;
 import fr.lixbox.io.document.xdocreport.document.textstyling.properties.TableCellProperties;
 import fr.lixbox.io.document.xdocreport.document.textstyling.properties.TableProperties;

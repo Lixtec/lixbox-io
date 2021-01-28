@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes;
 
 import java.util.HashMap;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.notes.NoteInfo;
-
 /**
  * Map which contains the intial information (id+content) of the footnote+endnote.
  * 

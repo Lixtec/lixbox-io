@@ -27,9 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.json;
 import java.io.IOException;
 import java.io.Writer;
 
-import fr.lixbox.io.document.xdocreport.document.json.JSONException;
-import fr.lixbox.io.document.xdocreport.document.json.JSONObject;
-
 /*
  Copyright (c) 2006 JSON.org
 

@@ -26,8 +26,6 @@ package fr.lixbox.io.document.xdocreport.core;
 
 import static java.text.MessageFormat.format;
 
-import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-
 /**
  * Exception thrown when report is not found.
  */

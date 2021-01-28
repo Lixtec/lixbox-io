@@ -24,10 +24,9 @@
  */
 package fr.lixbox.io.document.xdocreport.document.dispatcher;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.core.document.DocumentKind;
-import fr.lixbox.io.document.xdocreport.document.dispatcher.IXDocReportController;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
+import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 
 public abstract class AbstractXDocReportController
     implements IXDocReportController

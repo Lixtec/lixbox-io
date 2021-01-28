@@ -24,9 +24,9 @@
  */
 package fr.lixbox.io.document.xdocreport.template.velocity;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.AbstractFieldsMetadataClassSerializer;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.template.TemplateEngineKind;
+import fr.lixbox.io.document.xdocreport.template.formatter.AbstractFieldsMetadataClassSerializer;
 
 public class VelocityFieldsMetadataClassSerializer
     extends AbstractFieldsMetadataClassSerializer

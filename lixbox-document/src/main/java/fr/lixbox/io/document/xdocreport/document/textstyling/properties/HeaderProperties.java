@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.document.textstyling.properties;
 
-import fr.lixbox.io.document.xdocreport.document.textstyling.properties.ContainerProperties;
-
 /**
  * Header properties.
  */

@@ -24,8 +24,6 @@
  */
 package fr.lixbox.io.document.xdocreport.template.formatter;
 
-import fr.lixbox.io.document.xdocreport.template.formatter.Directive;
-
 public class LoopDirective
     extends Directive
 {

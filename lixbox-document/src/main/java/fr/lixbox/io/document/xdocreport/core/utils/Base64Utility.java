@@ -41,7 +41,6 @@ import java.util.logging.Logger;
 
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
-import fr.lixbox.io.document.xdocreport.core.utils.Base64Exception;
 
 /**
  * This class converts to/from base64. The alternative conversions include: encode: byte[] into String byte[] into

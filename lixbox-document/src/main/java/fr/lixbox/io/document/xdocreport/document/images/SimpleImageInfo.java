@@ -44,9 +44,8 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.Vector;
 
-import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.document.ImageFormat;
-import fr.lixbox.io.document.xdocreport.document.images.IImageInfo;
+import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 
 /**
  * Get file format, image resolution, number of bits per pixel and optionally 

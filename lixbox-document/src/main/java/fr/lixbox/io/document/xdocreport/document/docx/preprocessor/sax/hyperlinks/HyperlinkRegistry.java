@@ -27,8 +27,6 @@ package fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlin
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.lixbox.io.document.xdocreport.document.docx.preprocessor.sax.hyperlinks.HyperlinkInfo;
-
 /**
  * Registry which stores each Hyperlink of the final generated report.
  */
