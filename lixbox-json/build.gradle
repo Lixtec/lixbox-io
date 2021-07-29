@@ -1,11 +1,11 @@
 project(':lixbox-json'){    
 	dependencies {     
         //lixbox
-        compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
+        api(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
         
 
         // ================================ Test ================================
-        testCompile group: 'junit', name:'junit', version: version_junit
+        testImplementation group: 'junit', name:'junit', version: version_junit
 	}
         
     jar{

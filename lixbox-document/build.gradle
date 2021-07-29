@@ -1,39 +1,39 @@
 project(':lixbox-document'){
 	dependencies {    
         //lixbox
-        compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
+        api(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
         
         //divers
-        compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
-        compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
+        implementation group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+        implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
         
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.template.velocity', version: version_xdocreport
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.docx', version: version_xdocreport
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.pptx', version: version_xdocreport
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.odt', version: version_xdocreport
-        compile (group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.docx.docx4j', version: version_xdocreport)
+        implementation group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.template.velocity', version: version_xdocreport
+        implementation group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.docx', version: version_xdocreport
+        implementation group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.pptx', version: version_xdocreport
+        implementation group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.odt', version: version_xdocreport
+        implementation (group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.docx.docx4j', version: version_xdocreport)
         {
             exclude group: 'log4j', module:'log4j'
         }                
-        compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.odt.odfdom', version: version_xdocreport
+        implementation group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.odt.odfdom', version: version_xdocreport
         
-        compile ('net.sourceforge.jexcelapi:jxl:2.6.12')
+        implementation ('net.sourceforge.jexcelapi:jxl:2.6.12')
         {
             exclude group: 'log4j', module:'log4j'
         } 
-		compile group: 'log4j', name: 'log4j', version: '1.2.17'
+		implementation group: 'log4j', name: 'log4j', version: '1.2.17'
         
         
-        compile group: 'org.apache.poi', name:'poi', version: version_poi
-        compile group: 'org.apache.poi', name:'poi-ooxml', version: version_poi
-        compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
-        compile group: 'org.apache.poi', name:'poi-scratchpad', version: version_poi
-        compile group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
+        implementation group: 'org.apache.poi', name:'poi', version: version_poi
+        implementation group: 'org.apache.poi', name:'poi-ooxml', version: version_poi
+        implementation group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
+        implementation group: 'org.apache.poi', name:'poi-scratchpad', version: version_poi
+        implementation group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
 
 
         // ================================ Test ================================
-		testCompile group: 'junit', name:'junit', version: version_junit
-		testCompile group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.3.3'
+		testImplementation group: 'junit', name:'junit', version: version_junit
+		testImplementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.3.3'
 
 	}
     

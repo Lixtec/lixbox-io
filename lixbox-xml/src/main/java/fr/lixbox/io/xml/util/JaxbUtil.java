@@ -394,8 +394,8 @@ public class JaxbUtil
         }
         catch (Exception e)
         {
-            LOG.fatal(LixboxResources.getString("ERROR.JAXB.GEN.XML"));
-            LOG.fatal(e.getStackTrace());
+            LOG.fatal(LixboxResources.getString("ERROR.JAXB.GEN.XML"), e);
+            LOG.fatal("MESSAGE SANS CONTROLE\n"+marshallUnValidate(xmlRootElement, jaxbObject, encoding));
             throw new ProcessusException(LixboxResources.getString("ERROR.JAXB.GEN.XML"), e);
         }
     }
