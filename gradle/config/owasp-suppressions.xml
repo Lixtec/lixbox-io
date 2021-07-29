@@ -72,4 +72,25 @@
    <packageUrl regex="true">^pkg:maven/xalan/xalan@.*$</packageUrl>
    <vulnerabilityName>CVE-2014-0107</vulnerabilityName>
 </suppress>
+
+<suppress>
+   <notes><![CDATA[
+   file name: log4j-1.2.17.jar
+   ]]></notes>
+   <packageUrl regex="true">^pkg:maven/log4j/log4j@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-9488</vulnerabilityName>
+</suppress><suppress>
+   <notes><![CDATA[
+   file name: velocity-1.7.jar
+   ]]></notes>
+   <packageUrl regex="true">^pkg:maven/org\.apache\.velocity/velocity@.*$</packageUrl>
+   <cpe>cpe:/a:apache:velocity_engine</cpe>
+</suppress><suppress>
+   <notes><![CDATA[
+   file name: jdom2-2.0.6.jar
+   ]]></notes>
+   <packageUrl regex="true">^pkg:maven/org\.jdom/jdom2@.*$</packageUrl>
+   <cpe>cpe:/a:jdom:jdom</cpe>
+</suppress>
+
 </suppressions>
