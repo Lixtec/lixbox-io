@@ -4,32 +4,30 @@ project(':lixbox-document'){
         api(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)
         
         //divers
-        api group: 'org.apache.velocity', name: 'velocity', version: '1.7'
-        api group: 'org.apache.commons', name: 'commons-compress', version: '1.21'
-        
-        api group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.template.velocity', version: version_xdocreport
-        api group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.docx', version: version_xdocreport
-        api group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.pptx', version: version_xdocreport
-        api group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.document.odt', version: version_xdocreport
-        api (group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.docx.docx4j', version: version_xdocreport)
-        {
-            exclude group: 'log4j', module:'log4j'
-        }                
-        api group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.xdocreport.converter.odt.odfdom', version: version_xdocreport
-        
-        api ('net.sourceforge.jexcelapi:jxl:2.6.12')
+        implementation group: 'oro', name: 'oro', version: '2.0.8'
+        implementation group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+        implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
+        implementation ('net.sourceforge.jexcelapi:jxl:2.6.12')
         {
             exclude group: 'log4j', module:'log4j'
         } 
-		api group: 'log4j', name: 'log4j', version: '1.2.17'
+		implementation group: 'log4j', name: 'log4j', version: '1.2.17'
         
         
+        //poi
         implementation group: 'org.apache.poi', name:'poi', version: version_poi
         implementation group: 'org.apache.poi', name:'poi-ooxml', version: version_poi
         implementation group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
         implementation group: 'org.apache.poi', name:'poi-scratchpad', version: version_poi
         implementation group: 'org.apache.poi', name:'poi-ooxml-schemas', version: version_poi
 
+        
+        //docx4j
+        implementation group: 'org.docx4j', name: 'docx4j-core', version: version_docx4j
+        implementation group: 'org.docx4j', name: 'docx4j-JAXB-ReferenceImpl', version: version_docx4j
+        implementation (group: 'org.docx4j', name: 'docx4j-export-fo', version: version_docx4j) {
+        	exclude (group:'xml-apis')
+        }
 
         // ================================ Test ================================
 		testImplementation group: 'junit', name:'junit', version: version_junit

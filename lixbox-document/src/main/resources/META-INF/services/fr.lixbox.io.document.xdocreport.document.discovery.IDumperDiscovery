@@ -1,0 +1,3 @@
+fr.lixbox.io.document.xdocreport.document.dump.java.JavaMainDumperDiscovery
+fr.lixbox.io.document.xdocreport.document.dump.eclipse.EclipseProjectDumperDiscovery
+fr.lixbox.io.document.xdocreport.document.dump.maven.MavenProjectDumperDiscovery
