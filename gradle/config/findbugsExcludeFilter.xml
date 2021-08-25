@@ -1,13 +1,79 @@
 <?xml version="1.0"?>
 <FindBugsFilter>
     <Match>
-        <Bug code="EI" />
-    </Match>  
-    <Match>
-        <Bug code="EI2" />
-    </Match>  
-    <Match>
         <Class name="fr.lixbox.transform.document.test.TestDocConverter" />
         <Bug code="DMI" />
+    </Match>
+    <Match>
+        <Bug code="OBL" />
     </Match>  
+    <Match>
+        <Bug code="RV" />
+    </Match> 
+    <Match>
+        <Bug code="IL" />
+    </Match> 
+    <Match>
+        <Bug code="IS" />
+    </Match> 
+    <Match>
+        <Bug code="Dm" />
+    </Match> 
+    <Match>
+        <Bug code="Se" />
+    </Match> 
+    <Match>
+        <Bug code="Bx" />
+    </Match> 
+    <Match>
+        <Bug code="DE" />
+    </Match> 
+    <Match>
+        <Bug code="HE" />
+    </Match> 
+    <Match>
+        <Bug code="NP" />
+    </Match> 
+    <Match>
+        <Bug code="Nm" />
+    </Match> 
+    <Match>
+        <Bug code="EC" />
+    </Match> 
+    <Match>
+        <Bug code="EI" />
+    </Match> 
+    <Match>
+        <Bug code="EI2" />
+    </Match> 
+    <Match>
+        <Bug code="MS" />
+    </Match> 
+    <Match>
+        <Bug code="BC" />
+    </Match> 
+    <Match>
+        <Bug code="DLS" />
+    </Match> 
+    <Match>
+        <Bug code="Eq" />
+    </Match> 
+    <Match>
+        <Bug code="IC" />
+    </Match> 
+    <Match>
+        <Bug code="RCN" />
+    </Match> 
+    <Match>
+        <Bug code="SF" />
+    </Match> 
+    <Match>
+        <Bug code="UC" />
+    </Match> 
+    <Match>
+        <Bug code="MS" />
+    </Match> 
+    <Match>
+        <Bug code="REC" />
+    </Match> 
 </FindBugsFilter>
