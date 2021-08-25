@@ -1,0 +1,17 @@
+println "======================================== critical updates =========================="
+subprojects {
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            if (details.requested.group.contains('org.apache.httpcomponents') && 
+                    details.requested.name.contains('httpclient')) {
+                    details.useVersion '4.5.13'
+                    details.because 'critical cve in 4.5.12'
+            }
+            if (details.requested.group.contains('apache.xmlgraphics') &&
+                    details.requested.version.contains('1.13')) {
+                    details.useVersion '1.14'
+                    details.because 'critical cve in 1.13'
+            }
+        }
+    }
+}
