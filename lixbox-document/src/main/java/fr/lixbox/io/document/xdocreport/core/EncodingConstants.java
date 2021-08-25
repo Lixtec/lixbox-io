@@ -25,6 +25,7 @@
 package fr.lixbox.io.document.xdocreport.core;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Encoding constants.
@@ -35,7 +36,7 @@ public class EncodingConstants
     /**
      * UTF-8 Charset constant.
      */
-    public static final Charset UTF_8 = Charset.forName( "UTF-8" );
+    public static final Charset UTF_8 = StandardCharsets.UTF_8;
 
     // Special characters
     public static final String APOS = "&apos;";

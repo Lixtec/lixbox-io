@@ -41,7 +41,7 @@ public class ConverterFrom
     public ConverterFrom( String from )
     {
         this.from = from;
-        this.convertersTo = new HashMap<String, ConverterTo>();
+        this.convertersTo = new HashMap<>();
     }
 
     public String getFrom()

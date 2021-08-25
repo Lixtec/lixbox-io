@@ -41,7 +41,7 @@ public class ConverterTo
     public ConverterTo( String to )
     {
         this.to = to;
-        this.converters = new HashMap<String, IConverter>();
+        this.converters = new HashMap<>();
     }
 
     public String getTo()

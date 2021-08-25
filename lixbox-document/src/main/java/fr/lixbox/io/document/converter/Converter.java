@@ -46,7 +46,7 @@ public abstract class Converter implements Serializable
     
 
     // ----------- Methode(s) -----------   
-    public Converter(InputStream inStream, OutputStream outStream)
+    protected Converter(InputStream inStream, OutputStream outStream)
 	{
 		this.inStream = inStream;
 		this.outStream = outStream;

@@ -48,7 +48,7 @@ public class ConverterRegistry
      */
     private static final Logger LOGGER = LogUtils.getLogger( ConverterRegistry.class.getName() );
 
-    private Map<String /* from */, ConverterFrom> converters = new HashMap<String, ConverterFrom>();
+    private Map<String /* from */, ConverterFrom> converters = new HashMap<>();
 
     public ConverterRegistry()
     {
@@ -138,25 +138,18 @@ public class ConverterRegistry
             IConverter converter = toConverters.getDefaultConverter();
             if ( throwError && converter == null )
             {
-                if ( throwError )
-                {
-                    String msg = String.format( "Cannot find converters for to=%s for from=%s", to, from );
-                    LOGGER.severe( msg );
-                    throw new XDocConverterException( msg );
-                }
+                String msg = String.format( "Cannot find converters for to=%s for from=%s", to, from );
+                LOGGER.severe( msg );
+                throw new XDocConverterException( msg );
             }
             return converter;
         }
 
         IConverter converter = toConverters.getConverter( via );
-        if ( converter == null )
-        {
-            if ( throwError )
-            {
-                String msg = String.format( "Cannot find converters via %s for to=%s for from=%s", via, to, from );
-                LOGGER.severe( msg );
-                throw new XDocConverterException( msg );
-            }
+        if ( converter == null && throwError ) {
+            String msg = String.format( "Cannot find converters via %s for to=%s for from=%s", via, to, from );
+            LOGGER.severe( msg );
+            throw new XDocConverterException( msg );
         }
         return converter;
     }
