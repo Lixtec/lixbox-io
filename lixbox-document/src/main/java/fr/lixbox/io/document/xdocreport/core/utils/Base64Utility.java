@@ -37,10 +37,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Writer;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 /**
  * This class converts to/from base64. The alternative conversions include: encode: byte[] into String byte[] into
@@ -50,7 +51,7 @@ import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 public final class Base64Utility
 {
 
-    private static final Logger LOG = LogUtils.getLogger( Base64Utility.class );
+    private static final Log LOG = LogFactory.getLog( Base64Utility.class );
 
     // base 64 character set
     //
@@ -176,7 +177,7 @@ public final class Base64Utility
         }
         catch ( Exception e )
         {
-            LOG.warning( "Invalid base64 encoded string : " + id );
+            LOG.warn( "Invalid base64 encoded string : " + id );
             throw new Base64Exception( "Runtime exception in Base64Utility.decode() during output", e );
         }
     }
@@ -191,7 +192,7 @@ public final class Base64Utility
         }
         catch ( Exception e )
         {
-            LOG.warning( "Invalid base64 encoded string : " + new String( id ) );
+            LOG.warn( "Invalid base64 encoded string : " + new String( id ) );
             throw new Base64Exception( "Runtime exception in Base64Utility.decode() during output", e );
         }
     }
@@ -211,7 +212,7 @@ public final class Base64Utility
         }
         catch ( Exception e )
         {
-            LOG.warning( "Invalid base64 encoded string : " + id );
+            LOG.warn( "Invalid base64 encoded string : " + id );
             throw new Base64Exception( "Runtime exception in Base64Utility.decode() during output", e );
         }
     }

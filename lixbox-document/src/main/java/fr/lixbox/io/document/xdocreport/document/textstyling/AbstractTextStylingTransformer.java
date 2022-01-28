@@ -24,11 +24,10 @@
  */
 package fr.lixbox.io.document.xdocreport.document.textstyling;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 /**
  * Abstract class for text styling transformer.
@@ -40,7 +39,7 @@ public abstract class AbstractTextStylingTransformer
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = LogUtils.getLogger( AbstractTextStylingTransformer.class.getName() );
+    private static final Log LOG = LogFactory.getLog( AbstractTextStylingTransformer.class.getName() );
 
     public ITransformResult transform( String content, IDocumentHandler handler )
         throws XDocReportException
@@ -49,18 +48,12 @@ public abstract class AbstractTextStylingTransformer
         {
             doTransform( content, handler );
             ITransformResult result = handler;
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( result.toString() );
-            }
+            LOG.trace( result.toString() );
             return result;
         }
         catch ( Throwable e )
         {
-            if ( LOGGER.isLoggable( Level.SEVERE ) )
-            {
-                LOGGER.severe( e.getMessage() );
-            }
+            LOG.error( e.getMessage() );
             if ( e instanceof XDocReportException )
             {
                 throw (XDocReportException) e;

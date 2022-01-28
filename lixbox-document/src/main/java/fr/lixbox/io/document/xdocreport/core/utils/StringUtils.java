@@ -26,10 +26,11 @@ package fr.lixbox.io.document.xdocreport.core.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.EncodingConstants;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 /**
  * String Utilities.
@@ -39,7 +40,7 @@ public class StringUtils
     /**
      * Logger for this class
      */
-    private static final Logger logger = LogUtils.getLogger( StringUtils.class.getName() );
+    private static final Log LOG = LogFactory.getLog( StringUtils.class.getName() );
 
     public static final String[] EMPTY_STRING_ARRAY = new String[0];
 
@@ -446,7 +447,7 @@ public class StringUtils
         }
         catch ( UnsupportedEncodingException e )
         {
-            logger.severe( "String - exception: " + e ); //$NON-NLS-1$
+            LOG.fatal( "String - exception: " + e ); //$NON-NLS-1$
 
             return s;
         }

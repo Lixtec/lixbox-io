@@ -27,10 +27,11 @@ package fr.lixbox.io.document.xdocreport.document.dump;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 import fr.lixbox.io.document.xdocreport.document.discovery.IDumperDiscovery;
 
@@ -43,7 +44,7 @@ public class DumperRegistry
 
     private static final DumperRegistry INSTANCE = new DumperRegistry();
 
-    private static final Logger LOGGER = LogUtils.getLogger( DumperRegistry.class.getName() );
+    private static final Log LOG = LogFactory.getLog( DumperRegistry.class.getName() );
 
     private Map<String /* kind */, IDumper> dumpers = new HashMap<String, IDumper>();
 
@@ -78,7 +79,7 @@ public class DumperRegistry
         if ( dumper == null )
         {
             String msg = String.format( "Cannot find dumper with kind=%s", dumper );
-            LOGGER.severe( msg );
+            LOG.fatal( msg );
             throw new XDocReportException( msg );
         }
         return dumper;

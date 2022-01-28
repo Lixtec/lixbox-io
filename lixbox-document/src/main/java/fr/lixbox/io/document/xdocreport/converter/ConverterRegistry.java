@@ -27,11 +27,11 @@ package fr.lixbox.io.document.xdocreport.converter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.converter.discovery.IConverterDiscovery;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 
 /**
@@ -46,7 +46,7 @@ public class ConverterRegistry
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = LogUtils.getLogger( ConverterRegistry.class.getName() );
+    private static final Log LOG = LogFactory.getLog(ConverterRegistry.class.getName() );
 
     private Map<String /* from */, ConverterFrom> converters = new HashMap<>();
 
@@ -87,10 +87,7 @@ public class ConverterRegistry
         }
         catch ( XDocConverterException e )
         {
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( e.getMessage() );
-            }
+            LOG.trace( e.getMessage() );
             return null;
         }
     }
@@ -117,7 +114,7 @@ public class ConverterRegistry
             if ( throwError )
             {
                 String msg = String.format( "Cannot find converters from=%s", from );
-                LOGGER.severe( msg );
+                LOG.error(  msg );
                 throw new XDocConverterException( msg );
             }
             return null;
@@ -128,7 +125,7 @@ public class ConverterRegistry
             if ( throwError )
             {
                 String msg = String.format( "Cannot find converters for to=%s for from=%s", to, from );
-                LOGGER.severe( msg );
+                LOG.error( msg );
                 throw new XDocConverterException( msg );
             }
             return null;
@@ -139,7 +136,7 @@ public class ConverterRegistry
             if ( throwError && converter == null )
             {
                 String msg = String.format( "Cannot find converters for to=%s for from=%s", to, from );
-                LOGGER.severe( msg );
+                LOG.error( msg );
                 throw new XDocConverterException( msg );
             }
             return converter;
@@ -148,7 +145,7 @@ public class ConverterRegistry
         IConverter converter = toConverters.getConverter( via );
         if ( converter == null && throwError ) {
             String msg = String.format( "Cannot find converters via %s for to=%s for from=%s", via, to, from );
-            LOGGER.severe( msg );
+            LOG.error( msg );
             throw new XDocConverterException( msg );
         }
         return converter;

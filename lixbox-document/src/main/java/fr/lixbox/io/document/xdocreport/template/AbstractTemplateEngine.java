@@ -33,15 +33,15 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.io.MultiWriter;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.template.cache.ITemplateCacheInfoProvider;
 import fr.lixbox.io.document.xdocreport.template.config.ITemplateEngineConfiguration;
 
@@ -83,7 +83,7 @@ public abstract class AbstractTemplateEngine
         process( reportId, entryName, readerProvider, writer, context );
     }
 
-    private static final Logger LOGGER = LogUtils.getLogger( AbstractTemplateEngine.class.getName() );
+    private static final Log LOG = LogFactory.getLog( AbstractTemplateEngine.class.getName() );
 
     public void process( String reportId, String entryName, IEntryReaderProvider readerProvider, Writer writer,
                          IContext context )
@@ -91,15 +91,9 @@ public abstract class AbstractTemplateEngine
     {
         boolean useTemplateCache = isUseTemplateCache( reportId );
         // 1) Start process template engine
-        long startTime = -1;
-        if ( LOGGER.isLoggable( Level.FINE ) )
-        {
-
-            startTime = System.currentTimeMillis();
-            LOGGER.fine( format( "Start template engine id=%s for the entry=%s with template cache=%s", getId(),
-                                 entryName, useTemplateCache ) );
-
-        }
+        long startTime = System.currentTimeMillis();
+        LOG.trace( format( "Start template engine id=%s for the entry=%s with template cache=%s", getId(),
+                             entryName, useTemplateCache ) );
 
         Reader reader = null;
         try
@@ -117,26 +111,16 @@ public abstract class AbstractTemplateEngine
                 reader = readerProvider.getEntryReader( entryName );
                 processNoCache( templateName, context, reader, writer );
             }
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                // Debug start preprocess
-                startTime = System.currentTimeMillis();
+            LOG.trace( format( "Result template engine id=" + getId() + "  for the entry=" + entryName + ": " ) );
+            LOG.trace( prettyPrint( ( (MultiWriter) writer ).getWriter( 1 ).toString() ) );
 
-                LOGGER.fine( format( "Result template engine id=" + getId() + "  for the entry=" + entryName + ": " ) );
-                LOGGER.fine( prettyPrint( ( (MultiWriter) writer ).getWriter( 1 ).toString() ) );
-
-                LOGGER.fine( "End template engine id=" + getId() + " for the entry=" + entryName + " done with "
-                    + ( System.currentTimeMillis() - startTime ) + "(ms)." );
-            }
-
+            LOG.trace( "End template engine id=" + getId() + " for the entry=" + entryName + " done with "
+                + ( System.currentTimeMillis() - startTime ) + "(ms)." );
         }
         catch ( Throwable e )
         {
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( ( "End template engine id=" + getId() + " for the entry=" + entryName + " done with "
+            LOG.trace( ( "End template engine id=" + getId() + " for the entry=" + entryName + " done with "
                     + ( System.currentTimeMillis() - startTime ) + "(ms)." ) );
-            }
             if ( e instanceof RuntimeException )
             {
                 throw (RuntimeException) e;
@@ -194,11 +178,7 @@ public abstract class AbstractTemplateEngine
 
     private Writer getWriter( Writer writer )
     {
-        if ( LOGGER.isLoggable( Level.FINE ) )
-        {
-            return new MultiWriter( writer, new StringWriter() );
-        }
-        return writer;
+        return new MultiWriter( writer, new StringWriter() );
     }
 
     protected boolean isUseTemplateCache( String reportId )

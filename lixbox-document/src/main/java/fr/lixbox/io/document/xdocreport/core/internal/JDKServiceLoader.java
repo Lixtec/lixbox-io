@@ -26,10 +26,9 @@ package fr.lixbox.io.document.xdocreport.core.internal;
 
 import java.lang.reflect.Method;
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * JDK ServiceLoader is used to load services declared in the META-INF/services/MyClass. Switch JDK using, it uses:
@@ -51,7 +50,7 @@ import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 public abstract class JDKServiceLoader
 {
 
-    private static final Logger LOGGER = LogUtils.getLogger( JDKServiceLoader.class.getName() );
+    private static final Log LOG = LogFactory.getLog(JDKServiceLoader.class.getName());
 
     // The JDK Service loader to use.
     private static JDKServiceLoader JDK_SERVICE_LOADER;
@@ -63,10 +62,7 @@ public abstract class JDKServiceLoader
         {
             // At first, try to use JDK6 java.util.ServiceLoader
             JDK_SERVICE_LOADER = new JDK6ServiceLoader( classLoader );
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "Uses JDK6 java.util.ServiceLoader to load services." );
-            }
+            LOG.trace( "Uses JDK6 java.util.ServiceLoader to load services." );
         }
         catch ( Throwable e )
         {
@@ -74,18 +70,12 @@ public abstract class JDKServiceLoader
             try
             {
                 JDK_SERVICE_LOADER = new JDK5ServiceLoader( classLoader );
-                if ( LOGGER.isLoggable( Level.FINE ) )
-                {
-                    LOGGER.fine( "Uses JDK5 javax.imageio.spi.ServiceRegistry to load services." );
-                }
+                LOG.trace( "Uses JDK5 javax.imageio.spi.ServiceRegistry to load services." );
             }
             catch ( Throwable e1 )
             {
                 // Should never thrown.
-                if ( LOGGER.isLoggable( Level.SEVERE ) )
-                {
-                    LOGGER.log( Level.SEVERE, "Error while initialization of JDKServiceLoader", e1 );
-                }
+                LOG.error("Error while initialization of JDKServiceLoader", e1 );
             }
         }
     }

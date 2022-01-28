@@ -36,8 +36,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.converter.ConverterRegistry;
 import fr.lixbox.io.document.xdocreport.converter.IConverter;
@@ -48,7 +49,6 @@ import fr.lixbox.io.document.xdocreport.core.io.IEntryOutputStreamProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryReaderProvider;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryWriterProvider;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.document.dump.DumperOptions;
 import fr.lixbox.io.document.xdocreport.document.dump.DumperRegistry;
@@ -73,7 +73,7 @@ public abstract class AbstractXDocReport
     implements IXDocReport
 {
 
-    private static final Logger LOGGER = LogUtils.getLogger( AbstractXDocReport.class.getName() );
+    private static final Log LOG = LogFactory.getLog( AbstractXDocReport.class.getName() );
 
     private static final long serialVersionUID = -6632379345569386476L;
 
@@ -492,12 +492,8 @@ public abstract class AbstractXDocReport
         throws XDocReportException, IOException
     {
         // 1) Start process report generation
-        long startTime = -1;
-        if ( LOGGER.isLoggable( Level.FINE ) )
-        {
-            startTime = System.currentTimeMillis();
-            LOGGER.fine( "Start process report " );
-        }
+        long startTime = System.currentTimeMillis();
+        LOG.trace( "Start process report " );
         XDocArchive outputArchive = null;
         try
         {
@@ -534,22 +530,14 @@ public abstract class AbstractXDocReport
                 XDocArchive.writeZip( outputArchive, out );
             }
             // 7) End process report generation
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-
-                LOGGER.fine( "End process report done with " + ( System.currentTimeMillis() - startTime ) + "(ms)." );
-            }
-
+            LOG.trace( "End process report done with " + ( System.currentTimeMillis() - startTime ) + "(ms)." );
         }
         catch ( Throwable e )
         {
             // Error while report generation
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "End process report with error done with " + ( System.currentTimeMillis() - startTime )
+            LOG.trace( "End process report with error done with " + ( System.currentTimeMillis() - startTime )
                     + "(ms)." );
-                LOGGER.throwing( getClass().getName(), "process", e );
-            }
+            LOG.trace( getClass().getName() + " process", e );
             if ( e instanceof RuntimeException )
             {
                 throw (RuntimeException) e;
@@ -674,13 +662,8 @@ public abstract class AbstractXDocReport
         throws XDocReportException, XDocConverterException, IOException
     {
         // 1) Start process report generation
-        long startTime = -1;
-        if ( LOGGER.isLoggable( Level.FINE ) )
-        {
-            // Debug start process
-            startTime = System.currentTimeMillis();
-            LOGGER.fine( "Start convert report " );
-        }
+        long startTime = System.currentTimeMillis();
+        LOG.trace( "Start convert report " );
         XDocArchive outputArchive = null;
         try
         {
@@ -711,21 +694,14 @@ public abstract class AbstractXDocReport
             }
 
             // 7) End process report generation
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "End convert report done with " + ( System.currentTimeMillis() - startTime )
+            LOG.trace( "End convert report done with " + ( System.currentTimeMillis() - startTime )
                     + "(ms)." );
-            }
         }
         catch ( Throwable e )
         {
             // Error while report generation
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "End convert report with error done with " + ( System.currentTimeMillis() - startTime )
-                    + "(ms)." );
-                LOGGER.throwing( getClass().getName(), "convert", e );
-            }
+            LOG.trace( "End convert report with error done with " + ( System.currentTimeMillis() - startTime ) + "(ms)." );
+            LOG.trace( getClass().getName()+" convert", e );
             if ( e instanceof RuntimeException )
             {
                 throw (RuntimeException) e;

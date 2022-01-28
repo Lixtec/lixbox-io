@@ -34,7 +34,9 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.converter.MimeMapping;
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
@@ -42,7 +44,6 @@ import fr.lixbox.io.document.xdocreport.core.cache.CacheStorageRegistry;
 import fr.lixbox.io.document.xdocreport.core.cache.ICacheStorage;
 import fr.lixbox.io.document.xdocreport.core.io.IEntryInfo;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.core.registry.AbstractRegistry;
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.document.IXDocReport;
@@ -67,7 +68,7 @@ public class XDocReportRegistry
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = LogUtils.getLogger( AbstractRegistry.class.getName() );
+    private static final Log LOG = LogFactory.getLog( AbstractRegistry.class.getName() );
 
     private static final String FILES_TYPE_ERROR =
         "Impossible to create report for the input stream. The report loader supports only [{0}] files type.";
@@ -455,7 +456,7 @@ public class XDocReportRegistry
         {
             String msg =
                 String.format( "Cannot register report. A report with id=%s already exists in the registry", reportId );
-            LOGGER.warning( msg );
+            LOG.warn( msg );
             throw new XDocReportException( msg );
         }
     }

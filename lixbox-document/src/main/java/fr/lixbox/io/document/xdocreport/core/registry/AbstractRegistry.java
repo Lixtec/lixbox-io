@@ -25,12 +25,12 @@
 package fr.lixbox.io.document.xdocreport.core.registry;
 
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.discovery.IBaseDiscovery;
 import fr.lixbox.io.document.xdocreport.core.internal.JDKServiceLoader;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 public abstract class AbstractRegistry<Discovery extends IBaseDiscovery>
 {
@@ -38,7 +38,7 @@ public abstract class AbstractRegistry<Discovery extends IBaseDiscovery>
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = LogUtils.getLogger( AbstractRegistry.class.getName() );
+    private static final Log LOG = LogFactory.getLog(AbstractRegistry.class.getName() );
 
     private boolean initialized;
 
@@ -63,10 +63,7 @@ public abstract class AbstractRegistry<Discovery extends IBaseDiscovery>
 
             Iterator<Discovery> discoveries =
                 JDKServiceLoader.lookupProviders( registryType, getClass().getClassLoader() );
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "discoveries found ? " + discoveries.hasNext() );
-            }
+            LOG.trace( "discoveries found ? " + discoveries.hasNext() );
 
             while ( discoveries.hasNext() )
             {
@@ -74,14 +71,11 @@ public abstract class AbstractRegistry<Discovery extends IBaseDiscovery>
                 try
                 {
                     boolean result = registerInstance( instance );
-                    if ( LOGGER.isLoggable( Level.FINE ) )
-                    {
-                        LOGGER.fine( "Registered Discovery instance  " + instance + " " + result );
-                    }
+                    LOG.trace( "Registered Discovery instance  " + instance + " " + result );
                 }
                 catch ( Throwable e )
                 {
-                    LOGGER.log( Level.WARNING, "Error while registration of Discovery instance  " + instance, e );
+                    LOG.error("Error while registration of Discovery instance  " + instance, e );
                 }
             }
             onEndInitialization();

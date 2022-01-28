@@ -31,15 +31,15 @@ import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.XDocReportException;
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
 import fr.lixbox.io.document.xdocreport.core.io.MultiWriter;
 import fr.lixbox.io.document.xdocreport.core.io.StreamCancelable;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 import fr.lixbox.io.document.xdocreport.template.formatter.FieldsMetadata;
 import fr.lixbox.io.document.xdocreport.template.formatter.IDocumentFormatter;
 
@@ -53,7 +53,7 @@ public abstract class AbstractXDocPreprocessor<T>
     /**
      * Logger for this class
      */
-    private static final Logger LOGGER = LogUtils.getLogger( AbstractXDocPreprocessor.class.getName() );
+    private static final Log LOG = LogFactory.getLog( AbstractXDocPreprocessor.class.getName() );
 
     public void preprocess( String entryName, XDocArchive documentArchive, FieldsMetadata fieldsMetadata,
                             IDocumentFormatter formater, Map<String, Object> sharedContext )
@@ -64,14 +64,8 @@ public abstract class AbstractXDocPreprocessor<T>
             fieldsMetadata = FieldsMetadata.EMPTY;
         }
         // 1) Start preprocess
-        long startTime = -1;
-        if ( LOGGER.isLoggable( Level.FINE ) )
-        {
-
-            startTime = System.currentTimeMillis();
-
-            LOGGER.fine( "Start preprocess for the entry=" + entryName );
-        }
+        long startTime = System.currentTimeMillis();
+        LOG.trace( "Start preprocess for the entry=" + entryName );
 
         // 2) Do preprocess
         T reader = null;
@@ -87,22 +81,16 @@ public abstract class AbstractXDocPreprocessor<T>
             // in the writer.
             result = preprocess( entryName, reader, writer, fieldsMetadata, formater, sharedContext );
 
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "Result preprocess for the entry=" + entryName + ": "
+            LOG.trace( "Result preprocess for the entry=" + entryName + ": "
                     + prettyPrint( ( (MultiWriter) writer ).getWriter( 1 ).toString() ) );
-                LOGGER.fine( "End preprocess for the entry=" + entryName + " done with "
+            LOG.trace( "End preprocess for the entry=" + entryName + " done with "
                     + ( System.currentTimeMillis() - startTime ) + "(ms)." );
-            }
         }
         catch ( Throwable e )
         {
-            if ( LOGGER.isLoggable( Level.FINE ) )
-            {
-                LOGGER.fine( "End preprocess for the entry=" + entryName + " done with "
+           LOG.trace( "End preprocess for the entry=" + entryName + " done with "
                     + ( System.currentTimeMillis() - startTime ) + "(ms)." );
-                LOGGER.throwing( getClass().getName(), "preprocess", e );
-            }
+           LOG.trace( getClass().getName()+ " preprocess", e );
             if ( e instanceof RuntimeException )
             {
                 throw (RuntimeException) e;
@@ -142,12 +130,7 @@ public abstract class AbstractXDocPreprocessor<T>
 
     private Writer getWriter( String entryName, XDocArchive documentArchive )
     {
-
-        if ( LOGGER.isLoggable( Level.FINE ) )
-        {
-            return new MultiWriter( documentArchive.getEntryWriter( entryName ), new StringWriter() );
-        }
-        return documentArchive.getEntryWriter( entryName );
+        return new MultiWriter( documentArchive.getEntryWriter( entryName ), new StringWriter() );
     }
 
     public boolean create( String entryName, XDocArchive outputArchive, FieldsMetadata fieldsMetadata,

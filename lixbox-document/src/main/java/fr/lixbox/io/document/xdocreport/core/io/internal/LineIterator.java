@@ -29,10 +29,11 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.io.IOUtils;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 /**
  * An Iterator over the lines in a <code>Reader</code>.
@@ -71,7 +72,7 @@ public class LineIterator
     /**
      * Logger for this class
      */
-    private static final Logger logger = LogUtils.getLogger( LineIterator.class.getName() );
+    private static final Log LOG = LogFactory.getLog( LineIterator.class.getName() );
 
     /** The reader that is being read. */
     private final BufferedReader bufferedReader;
@@ -144,7 +145,7 @@ public class LineIterator
             }
             catch ( IOException ioe )
             {
-                logger.severe( "exception: " + ioe ); //$NON-NLS-1$
+                LOG.fatal( "exception: " + ioe ); //$NON-NLS-1$
 
                 close();
                 throw new IllegalStateException( ioe.toString() );

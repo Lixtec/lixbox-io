@@ -42,11 +42,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.logging.Logger;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.lixbox.io.document.xdocreport.core.io.internal.ByteArrayOutputStream;
 import fr.lixbox.io.document.xdocreport.core.io.internal.LineIterator;
-import fr.lixbox.io.document.xdocreport.core.logging.LogUtils;
 
 //import org.apache.commons.io.output.ByteArrayOutputStream;
 
@@ -92,7 +93,7 @@ public class IOUtils
     /**
      * Logger for this class
      */
-    private static final Logger logger = LogUtils.getLogger( IOUtils.class.getName() );
+    private static final Log LOG = LogFactory.getLog( IOUtils.class.getName() );
 
     // NOTE: This class is focussed on InputStream, OutputStream, Reader and
     // Writer. Each method should take at least one of these as a parameter,
@@ -169,7 +170,7 @@ public class IOUtils
         }
         catch ( IOException ioe )
         {
-            logger.warning( "Reader - exception ignored - exception: " + ioe ); //$NON-NLS-1$
+            LOG.warn( "Reader - exception ignored - exception: " + ioe ); //$NON-NLS-1$
 
             // ignore
         }
@@ -194,7 +195,7 @@ public class IOUtils
         }
         catch ( IOException ioe )
         {
-            logger.warning( "Writer - exception ignored - exception: " + ioe ); //$NON-NLS-1$
+            LOG.warn( "Writer - exception ignored - exception: " + ioe ); //$NON-NLS-1$
 
             // ignore
         }
@@ -219,7 +220,7 @@ public class IOUtils
         }
         catch ( IOException ioe )
         {
-            logger.warning( "InputStream - exception ignored - exception: " + ioe ); //$NON-NLS-1$
+            LOG.warn( "InputStream - exception ignored - exception: " + ioe ); //$NON-NLS-1$
 
             // ignore
         }
@@ -244,7 +245,7 @@ public class IOUtils
         }
         catch ( IOException ioe )
         {
-            logger.warning( "OutputStream - exception ignored - exception: " + ioe ); //$NON-NLS-1$
+            LOG.warn( "OutputStream - exception ignored - exception: " + ioe ); //$NON-NLS-1$
 
             // ignore
         }
