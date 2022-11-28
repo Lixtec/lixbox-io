@@ -35,6 +35,7 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.event.EventCartridge;
 import org.apache.velocity.app.event.ReferenceInsertionEventHandler;
+import org.apache.velocity.context.Context;
 
 import fr.lixbox.common.exceptions.BusinessException;
 import fr.lixbox.common.util.ExceptionUtil;
@@ -93,7 +94,7 @@ public class ReportUtil
             //remplissage du contexte
             IContext context = report.createContext();  
             EventCartridge eventCartridge = new EventCartridge();
-            ReferenceInsertionEventHandler rieh = (String s, Object o) -> {if (o == null) { return ""; } return o; };
+            ReferenceInsertionEventHandler rieh = (Context c, String s, Object o) -> {if (o == null) { return ""; } return o; };
             eventCartridge.addEventHandler(rieh);            
             eventCartridge.attachToContext((VelocityContext) context);         
             report.setFieldsMetadata(metadatas);

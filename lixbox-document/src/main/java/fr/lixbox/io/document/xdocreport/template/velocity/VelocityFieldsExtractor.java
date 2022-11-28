@@ -26,6 +26,7 @@ package fr.lixbox.io.document.xdocreport.template.velocity;
 
 import java.io.Reader;
 
+import org.apache.velocity.Template;
 import org.apache.velocity.runtime.RuntimeSingleton;
 import org.apache.velocity.runtime.parser.ParseException;
 import org.apache.velocity.runtime.parser.node.SimpleNode;
@@ -49,7 +50,9 @@ public class VelocityFieldsExtractor
     {
         try
         {
-            SimpleNode document = RuntimeSingleton.parse( reader, entryName );
+            Template tmpl = new Template();
+            tmpl.setName(entryName);
+            SimpleNode document = RuntimeSingleton.parse( reader, tmpl );
             ExtractVariablesVelocityVisitor visitor = new ExtractVariablesVelocityVisitor( extractor );
             visitor.setContext( null );
             document.jjtAccept( visitor, null );

@@ -158,6 +158,7 @@ public class VelocityTemplateEngine
     public void extractFields( Reader reader, String entryName, FieldsExtractor extractor )
         throws XDocReportException
     {
+//        Template template = velocityEngine.getTemplate(modelAndView.getViewName(), templateEncoding);
         VelocityFieldsExtractor.getInstance().extractFields( reader, entryName, extractor );
     }
 

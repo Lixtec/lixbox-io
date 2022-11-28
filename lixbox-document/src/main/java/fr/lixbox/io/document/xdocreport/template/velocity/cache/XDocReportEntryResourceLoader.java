@@ -24,13 +24,13 @@
  */
 package fr.lixbox.io.document.xdocreport.template.velocity.cache;
 
-import java.io.InputStream;
+import java.io.Reader;
 
-import org.apache.commons.collections.ExtendedProperties;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.apache.velocity.runtime.RuntimeServices;
 import org.apache.velocity.runtime.resource.Resource;
 import org.apache.velocity.runtime.resource.loader.ResourceLoader;
+import org.apache.velocity.util.ExtProperties;
 
 import fr.lixbox.io.document.xdocreport.core.io.IEntryInfo;
 import fr.lixbox.io.document.xdocreport.core.io.XDocArchive;
@@ -51,30 +51,30 @@ public class XDocReportEntryResourceLoader
     private ITemplateEngine templateEngine = null;
 
     @Override
-    public void commonInit( RuntimeServices rs, ExtendedProperties configuration )
+    public void commonInit( RuntimeServices rs, ExtProperties configuration )
     {
         super.commonInit( rs, configuration );
         this.templateEngine = (ITemplateEngine) rs.getProperty( VELOCITY_TEMPLATE_ENGINE_KEY );
     }
 
     @Override
-    public void init( ExtendedProperties configuration )
+    public void init( ExtProperties configuration )
     {
         // Do nothing
     }
 
     @Override
-    public InputStream getResourceStream( String source )
-        throws ResourceNotFoundException
+    public Reader getResourceReader(String source, String encoding)
+            throws ResourceNotFoundException
     {
         IEntryInfo cacheInfo =
             TemplateUtils.getTemplateCacheInfo( templateEngine.getTemplateCacheInfoProvider(), source );
         if ( cacheInfo != null )
         {
-            InputStream inputStream = cacheInfo.getInputStream();
-            if ( inputStream != null )
+            Reader reader = cacheInfo.getReader();
+            if ( reader != null )
             {
-                return inputStream;
+                return reader;
             }
         }
         throw new ResourceNotFoundException( "Cannot find input stream for the entry with source=" + source );

@@ -56,6 +56,10 @@ public class TestReportUtilConverter implements Serializable
         {
             FileUtils.forceDelete(new File("./test.docx"));
         }
+        if (new File("./test.pdf").exists())
+        {
+            FileUtils.forceDelete(new File("./test.pdf"));
+        }
     }
     
     

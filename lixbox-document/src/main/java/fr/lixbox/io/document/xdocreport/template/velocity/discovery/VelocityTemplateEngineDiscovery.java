@@ -87,7 +87,7 @@ public class VelocityTemplateEngineDiscovery
                 if ( Class.forName( "org.apache.velocity.runtime.log.NullLogChute" ) != null )
                 {
                     // Don't crash Velocity if NullLogChute doesn't exist
-                    velocityEngineProperties.setProperty( RuntimeConstants.RUNTIME_LOG_LOGSYSTEM_CLASS,
+                    velocityEngineProperties.setProperty( RuntimeConstants.DEFAULT_RUNTIME_LOG_NAME,
                                                           "org.apache.velocity.runtime.log.NullLogChute" );
                 }
             }
