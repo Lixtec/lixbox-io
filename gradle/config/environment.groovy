@@ -1,7 +1,7 @@
 desc_project{
     type="library"
     version{
-        majorVersion=11
+        majorVersion=7
         mediumVersion=1
         minorVersion=2
     }

@@ -94,9 +94,20 @@ public class ReportUtil
             //remplissage du contexte
             IContext context = report.createContext();  
             EventCartridge eventCartridge = new EventCartridge();
-            ReferenceInsertionEventHandler rieh = (Context c, String s, Object o) -> {if (o == null) { return ""; } return o; };
-            eventCartridge.addEventHandler(rieh);            
-            eventCartridge.attachToContext((VelocityContext) context);         
+            ReferenceInsertionEventHandler rieh = new ReferenceInsertionEventHandler()
+            {
+                @Override
+                public Object referenceInsert(Context context, String reference, Object o)
+                {
+                    if (o == null) 
+                    { 
+                        return ""; 
+                    } 
+                    return o; 
+                };
+            }; 
+            eventCartridge.addEventHandler(rieh);
+            eventCartridge.attachToContext((VelocityContext) context);
             report.setFieldsMetadata(metadatas);
             context.putMap(datas);
             

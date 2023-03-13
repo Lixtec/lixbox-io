@@ -211,8 +211,8 @@ subprojects {
 	    sign publishing.publications.mavenJava
 	}
     
-    sourceCompatibility = 11
-    targetCompatibility = 11
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
     compileJava.options.encoding = 'UTF-8'
     
     

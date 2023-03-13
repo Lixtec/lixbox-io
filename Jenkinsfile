@@ -2,7 +2,7 @@ BUILD_STATUS = 'success';
 gitUri = 'https://github.com/lixbox-team/lixbox-io.git';
 teamsHook  = '${TEAMS_BOT_URI}';
 channel = 'lixbox';
-branchName = 'jdk-11'
+branchName = 'jdk-7
 
 @NonCPS
 def onFailed(e) {
