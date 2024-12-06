@@ -661,7 +661,7 @@ public class StringEscapeUtils
              */
             public void add( String name, int value )
             {
-                mapNameToValue.put( name, new Integer( value ) );
+                mapNameToValue.put( name, value);
                 mapValueToName.put( value, name );
             }
 
@@ -714,7 +714,7 @@ public class StringEscapeUtils
              */
             public String name( int value )
             {
-                return (String) mapValueToName.get( new Integer( value ) );
+                return (String) mapValueToName.get( value );
             }
 
             /**

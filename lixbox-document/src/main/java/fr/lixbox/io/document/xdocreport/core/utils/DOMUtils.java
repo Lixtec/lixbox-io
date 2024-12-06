@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -56,17 +57,15 @@ public class DOMUtils
     public static Document load( InputStream stream )
         throws ParserConfigurationException, SAXException, IOException
     {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware( true );
+        DocumentBuilderFactory factory = getDocumentBuilderFactory();
         DocumentBuilder builder = factory.newDocumentBuilder();
         return builder.parse( stream );
     }
 
-    public static Document load( String xml )
+	public static Document load( String xml )
         throws ParserConfigurationException, SAXException, IOException
     {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware( true );
+        DocumentBuilderFactory factory = getDocumentBuilderFactory();
         DocumentBuilder builder = factory.newDocumentBuilder();
         return builder.parse( IOUtils.toInputStream( xml, EncodingConstants.UTF_8.name() ) );
     }
@@ -177,5 +176,18 @@ public class DOMUtils
         }
         return elements;
     }
+
+    private static DocumentBuilderFactory getDocumentBuilderFactory()
+    	throws ParserConfigurationException
+    {
+    	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+    	factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+    	factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+    	factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+    	factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+    	factory.setExpandEntityReferences(false);
+    	return factory;
+	}
 
 }

@@ -101,13 +101,11 @@ public abstract class AbstractImageProvider
         // to true, to compute width
         if ( height != null && isResize() )
         {
-            float ratio =
-                new Float( getImageInfo().getWidth() ).floatValue()
-                    / new Float( getImageInfo().getHeight() ).floatValue();
-            widthFromImageInfo = new Float( Math.round( height.floatValue() * ratio ) );
+            float ratio = getImageInfo().getWidth()/getImageInfo().getHeight();
+            widthFromImageInfo = (float) Math.round( height.floatValue() * ratio );
             return widthFromImageInfo;
         }
-        return widthFromImageInfo = new Float( getImageInfo().getWidth() );
+        return widthFromImageInfo = (float) getImageInfo().getWidth();
     }
 
     /*
@@ -133,13 +131,11 @@ public abstract class AbstractImageProvider
         // to true, to compute height
         if ( width != null && isResize() )
         {
-            float ratio =
-                new Float( getImageInfo().getHeight() ).floatValue()
-                    / new Float( getImageInfo().getWidth() ).floatValue();
-            heightFromImageInfo = new Float( Math.round( width.floatValue() * ratio ) );
+            float ratio = getImageInfo().getHeight() / getImageInfo().getWidth();
+            heightFromImageInfo = (float) Math.round( width.floatValue() * ratio);
             return heightFromImageInfo;
         }
-        return heightFromImageInfo = new Float( getImageInfo().getHeight() );
+        return heightFromImageInfo = (float) getImageInfo().getHeight();
     }
 
     /*

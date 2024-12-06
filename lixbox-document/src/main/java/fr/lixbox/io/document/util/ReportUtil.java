@@ -68,7 +68,7 @@ public class ReportUtil
         try        
         {
             LOG.debug("ReportUtil cree");
-            report = XDocReportRegistry.getRegistry().loadReport(in, reportId+RandomUtils.nextDouble(), TemplateEngineKind.Velocity);
+            report = XDocReportRegistry.getRegistry().loadReport(in, reportId+RandomUtils.secure().randomDouble(), TemplateEngineKind.Velocity);
         }
         catch (Exception e)
         {

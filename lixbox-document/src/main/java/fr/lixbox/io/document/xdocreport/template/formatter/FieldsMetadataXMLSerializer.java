@@ -31,10 +31,13 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.Collection;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.XMLReaderFactory;
 
 import fr.lixbox.io.document.xdocreport.core.utils.StringUtils;
 import fr.lixbox.io.document.xdocreport.template.formatter.sax.FieldsMetadataContentHandler;
@@ -75,11 +78,14 @@ public class FieldsMetadataXMLSerializer
      * @param inputStream the reader of the XML fields.
      * @throws SAXException
      * @throws IOException
+     * @throws ParserConfigurationException 
      */
     public FieldsMetadata load( Reader input )
-        throws SAXException, IOException
+        throws SAXException, IOException, ParserConfigurationException
     {
-        XMLReader saxReader = XMLReaderFactory.createXMLReader();
+    	SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser saxParser = factory.newSAXParser();
+        XMLReader saxReader = saxParser.getXMLReader();
         FieldsMetadataContentHandler myContentHandler = new FieldsMetadataContentHandler();
         saxReader.setContentHandler( myContentHandler );
         saxReader.parse( new InputSource( input ) );
@@ -100,12 +106,14 @@ public class FieldsMetadataXMLSerializer
      * @param inputStream the input stream of the XML fields.
      * @throws SAXException
      * @throws IOException
+     * @throws ParserConfigurationException 
      */
     public FieldsMetadata load( InputStream inputStream )
-        throws SAXException, IOException
+        throws SAXException, IOException, ParserConfigurationException
     {
-
-        XMLReader saxReader = XMLReaderFactory.createXMLReader();
+    	SAXParserFactory factory = SAXParserFactory.newInstance();
+        SAXParser saxParser = factory.newSAXParser();
+        XMLReader saxReader = saxParser.getXMLReader();
         FieldsMetadataContentHandler myContentHandler = new FieldsMetadataContentHandler();
         saxReader.setContentHandler( myContentHandler );
         saxReader.parse( new InputSource( inputStream ) );

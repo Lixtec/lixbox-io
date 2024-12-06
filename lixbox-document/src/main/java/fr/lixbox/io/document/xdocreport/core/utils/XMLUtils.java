@@ -42,7 +42,7 @@ import fr.lixbox.io.document.xdocreport.core.internal.XSLTPrettyPrinter;
 public class XMLUtils
 {
 
-    public static final Integer INDENT_NUMBER = new Integer( 4 );
+    public static final Integer INDENT_NUMBER = 4;
 
     public static final List<IXMLPrettyPrinter> PRINTERS;
 
