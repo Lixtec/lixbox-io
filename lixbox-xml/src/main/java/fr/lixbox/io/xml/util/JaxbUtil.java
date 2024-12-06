@@ -29,13 +29,6 @@ import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.UnmarshalException;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.ValidationEvent;
-import javax.xml.bind.util.ValidationEventCollector;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
@@ -50,6 +43,13 @@ import fr.lixbox.common.model.ConteneurEvenement;
 import fr.lixbox.common.model.Evenement;
 import fr.lixbox.common.model.enumeration.NiveauEvenement;
 import fr.lixbox.common.resource.LixboxResources;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.UnmarshalException;
+import jakarta.xml.bind.Unmarshaller;
+import jakarta.xml.bind.ValidationEvent;
+import jakarta.xml.bind.util.ValidationEventCollector;
 
 
 /**

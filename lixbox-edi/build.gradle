@@ -5,7 +5,7 @@ project(':lixbox-edi'){
 
         // ================================ Test ================================
         testImplementation group: 'junit', name:'junit', version: version_junit
-        testImplementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '2.3.3'
+		testImplementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: version_jaxb_runtime
 	}
         
     jar{

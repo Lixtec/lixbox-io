@@ -27,6 +27,7 @@ package fr.lixbox.io.document.xdocreport.template.velocity.internal;
 import java.util.Stack;
 
 import org.apache.velocity.runtime.parser.node.ASTDirective;
+import org.apache.velocity.runtime.parser.node.ASTNegateNode;
 import org.apache.velocity.runtime.parser.node.ASTReference;
 import org.apache.velocity.runtime.parser.node.ASTprocess;
 import org.apache.velocity.runtime.visitor.BaseVisitor;
@@ -37,9 +38,9 @@ public class ExtractVariablesVelocityVisitor
     extends BaseVisitor
 {
 
-    private final FieldsExtractor extractor;
+    private final FieldsExtractor<?> extractor;
 
-    public ExtractVariablesVelocityVisitor( FieldsExtractor extractor )
+    public ExtractVariablesVelocityVisitor( FieldsExtractor<?> extractor )
     {
         this.extractor = extractor;
     }
@@ -68,6 +69,16 @@ public class ExtractVariablesVelocityVisitor
         }
         return o;
     }
+    
+    
+
+	@Override
+	public Object visit(ASTNegateNode node, Object data) 
+	{
+        throw new UnsupportedOperationException();
+	}
+	
+	
 
     @Override
     public Object visit( ASTReference node, Object data )
